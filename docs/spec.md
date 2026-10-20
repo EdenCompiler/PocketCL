@@ -4,7 +4,11 @@ PocketCL is intended to be a small, explicit subset of ANSI Common Lisp, not a n
 
 ## Current status
 
-**M0 foundations are complete; M1–M12 and M14 are planned.** This file is an initial contract, not evidence that a reader, evaluator, compiler, condition system, or library feature is implemented. Follow [roadmap.md](../roadmap.md) for milestone scope and acceptance criteria.
+**M0 and M1 are implemented. M2–M12 and M14 are planned.** M1 provides the C value/heap/package APIs, bootstrap reader, and diagnostic printer. It does not yet execute Lisp. Follow [roadmap.md](../roadmap.md) for milestone scope and acceptance criteria.
+
+The bootstrap reader bounds nesting to 256 forms and individual tokens/strings to 4095 UTF-8 bytes. Exceeding these bootstrap limits, encountering invalid UTF-8, or embedding NUL source bytes produces a structured error with line and column. The later full Lisp reader is a separate milestone. String escapes quote the next character literally, as in the CLHS; `\\n` in source denotes `n`, not a C-style newline escape.
+
+At M1, NIL and T have their constant values and are exported; their type interfaces are planned, so their conformance status is partial. Other standard names may be interned internally by reader syntax without being exported or callable.
 
 ## Language and implementation policy
 

@@ -73,3 +73,13 @@ Decisions made where the roadmap leaves an implementation choice open. Add new e
 **Reason:** choose one constrained target early and keep the first font independent of runtime font tooling.
 
 **Alternatives rejected:** leave the device undecided or make M14 depend on M13's optional font pipeline.
+
+## 2026-10-20 — kernel headers, roots, and diagnostic limits
+
+**Decision:** object headers store type in bits 0–7, the mark bit at 8, and size in eight-byte units from bit 10. One startup allocation contains both the heap and an iterative collector work stack; its total is the configured arena size. Small free blocks have eight-byte size classes; large blocks use first fit and sweep coalesces adjacent free blocks.
+
+**Reason:** byte-size encoding above bit 16 cannot represent a multi-megabyte free block on a 32-bit PSP. Unit encoding preserves the one-word header without this limit. Explicit safe points and root ranges allow constructors to remain non-collecting. Internal Value pointers must designate object starts; the collector validates bounds/header rather than performing a quadratic search per edge.
+
+**Alternatives rejected:** separately allocated GC metadata, post-initialization host reallocations, implicit constructor collection, recursive marking, and a full heap scan for every pointer.
+
+The C `p_equal` helper is a bounded diagnostic comparator for reader tests, including vectors and finite cyclic graphs. It uses fixed local work arrays and returns false when its 1024-pair budget is exceeded. It is not CL:EQUAL; language equality belongs in Lisp. The diagnostic printer similarly emits stable cycle/depth markers. The bootstrap reader has explicit 256-form/4095-byte limits and reports excesses rather than exhausting C stacks.

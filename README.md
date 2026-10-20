@@ -1,6 +1,6 @@
 # PocketCL
 
-PocketCL is a small Common Lisp subset paired with a native UI runtime. **M0 foundations are complete; M1 kernel core is next.** Local `make ci` checks pass; remote macOS CI is still pending. The design and milestone plan live in [roadmap.md](roadmap.md); this README describes how to navigate the repository as the implementation grows.
+PocketCL is a small Common Lisp subset paired with a native UI runtime. **M0 foundations and M1 kernel core are implemented; M2 bootstrap execution is next.** Local `make ci` passes strict GCC/Clang builds, sanitizers, GC stress, and one million reader fuzz inputs; remote macOS CI remains pending. The design and milestone plan live in [roadmap.md](roadmap.md).
 
 ## Project split
 
@@ -11,6 +11,8 @@ The C99 kernel owns low-level mechanisms: values and memory, the bootstrap reade
 Use `make` for the default build and `make ci` for the current M0 checks. The local CI workflow builds/runs the C harness with GCC, Clang, ASAN/UBSAN, and the GC-stress configuration, plus the conformance-table check. Remote Linux/macOS CI is planned; macOS has not yet been exercised remotely. The roadmap's later targets include `make stage0`, `make bootstrap`, `make golden`, optional `make diff-sbcl`, and `make bench`; consult the current Makefile because targets arrive with their milestones. SBCL is an optional test oracle, never a build dependency. The project adds no runtime dependencies beyond those listed in the roadmap.
 
 ## Where to start
+
+For the current kernel, begin with `kernel/include/pocket.h`, then `value.c` for representation, `heap.c` for allocation/GC, `package.c` for names, and `reader0.c`/`debugprint.c` for syntax. Each subsystem has tests under `tests/c/`. Allocators never collect: register live values with `p_roots` before calling the explicit `p_reserve` safe point.
 
 - [CONTRIBUTING.md](CONTRIBUTING.md) explains the language boundary, test expectations, and a useful newcomer path.
 - [docs/spec.md](docs/spec.md) summarizes the language contract and its relationship to the Common Lisp HyperSpec.

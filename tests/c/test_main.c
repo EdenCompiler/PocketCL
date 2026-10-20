@@ -2,6 +2,10 @@
 
 unsigned test_assertions;
 
+void test_memory(void);
+void test_package(void);
+void test_reader(void);
+
 static void foundation_test(void)
 {
     /* Replaced by cumulative subsystem tests as each milestone lands. */
@@ -10,7 +14,10 @@ static void foundation_test(void)
 
 int main(void)
 {
-    const TestCase cases[] = { TEST_CASE(foundation_test) };
+    const TestCase cases[] = {
+        TEST_CASE(foundation_test), TEST_CASE(test_memory), TEST_CASE(test_package),
+        TEST_CASE(test_reader)
+    };
     const size_t count = sizeof(cases) / sizeof(cases[0]);
     size_t i;
 

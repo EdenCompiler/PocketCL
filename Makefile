@@ -9,12 +9,17 @@ CPPFLAGS = -Ikernel/include -Itests/c
 LDFLAGS =
 LDLIBS = -lm
 
-KERNEL_SOURCES =
-TEST_SOURCES = tests/c/test_main.c
+KERNEL_SOURCES = kernel/src/value.c kernel/src/heap.c kernel/src/package.c kernel/src/reader0.c kernel/src/debugprint.c kernel/src/float_io.c
+HEADERS = kernel/include/pocket.h kernel/include/heap_internal.h kernel/include/float_io.h tests/c/test.h
+TEST_SOURCES = tests/c/test_main.c tests/c/test_memory.c tests/c/test_package.c tests/c/test_reader.c
 
 all: $(BUILD)/tests
 
-$(BUILD)/tests: $(TEST_SOURCES) $(KERNEL_SOURCES) tests/c/test.h
+$(BUILD)/fuzz-reader: tests/c/fuzz_reader.c $(KERNEL_SOURCES) $(HEADERS)
+	mkdir -p $(BUILD)
+	$(CC) $(CPPFLAGS) $(WARNINGS) $(CFLAGS) tests/c/fuzz_reader.c $(KERNEL_SOURCES) $(LDFLAGS) $(LDLIBS) -o $@
+
+$(BUILD)/tests: $(TEST_SOURCES) $(KERNEL_SOURCES) $(HEADERS)
 	mkdir -p $(BUILD)
 	$(CC) $(CPPFLAGS) $(WARNINGS) $(CFLAGS) $(TEST_SOURCES) $(KERNEL_SOURCES) $(LDFLAGS) $(LDLIBS) -o $@
 
@@ -32,7 +37,10 @@ clang:
 	$(MAKE) test CC=clang BUILD=build/clang
 
 asan:
-	$(MAKE) test CC=clang BUILD=build/sanitize CFLAGS='-O1 -g -fno-omit-frame-pointer -fsanitize=address,undefined' LDFLAGS='-fsanitize=address,undefined'
+	$(MAKE) test fuzz CC=clang BUILD=build/sanitize CFLAGS='-O1 -g -fno-omit-frame-pointer -fsanitize=address,undefined' LDFLAGS='-fsanitize=address,undefined'
+
+fuzz: $(BUILD)/fuzz-reader
+	$(BUILD)/fuzz-reader 1000000
 
 stress:
 	$(MAKE) test BUILD=build/stress CPPFLAGS='-Ikernel/include -Itests/c -DPOCKET_GC_STRESS=1'
@@ -42,4 +50,4 @@ ci: gcc clang asan stress
 clean:
 	rm -rf build
 
-.PHONY: all test conformance gcc clang asan stress ci clean
+.PHONY: all test conformance gcc clang asan stress ci clean fuzz

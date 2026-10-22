@@ -1,6 +1,6 @@
 # Contributing to PocketCL
 
-PocketCL is being built milestone by milestone. Start with [roadmap.md](roadmap.md), especially the language split, repository layout, testing strategy, and milestone acceptance criteria. M0/M1 local checks pass; M2 bootstrap execution is next. Remote macOS CI is pending. Later milestones remain planned until their acceptance criteria pass.
+PocketCL is being built milestone by milestone. Start with [roadmap.md](roadmap.md), especially the language split, repository layout, testing strategy, and milestone acceptance criteria. M0–M2 local checks pass; M3 compiler/VM work is next. Remote macOS CI is pending. Later milestones remain planned until their acceptance criteria pass.
 
 ## First contribution path
 
@@ -19,6 +19,11 @@ The roadmap's intended checks grow by milestone: C unit tests first, then portab
 ## C and Lisp boundary
 
 Keep C small and mechanism-focused. If performance appears to require moving Lisp logic into C, follow the roadmap's Rule of Promotion: record a benchmark, try Lisp optimizations first, keep a Lisp reference implementation, and test that both implementations agree. Do not add a runtime dependency to solve a policy problem.
+
+For an execution and memory walkthrough, read [docs/bootstrap.md](docs/bootstrap.md).
+It follows a source form from the reader through macro expansion and application,
+and shows the explicit root/reserve/allocate pattern. Comments should explain
+scope, ownership, and invariants so a new contributor can safely change the code.
 
 ## Style and portability
 

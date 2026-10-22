@@ -1,979 +1,979 @@
-name	kind	status
-&ALLOW-OTHER-KEYS	type	unimplemented
-&AUX	type	unimplemented
-&BODY	type	unimplemented
-&ENVIRONMENT	type	unimplemented
-&KEY	type	unimplemented
-&OPTIONAL	type	unimplemented
-&REST	type	unimplemented
-&WHOLE	type	unimplemented
-*	function,variable,type	unimplemented
-**	variable,type	unimplemented
-***	variable,type	unimplemented
-*BREAK-ON-SIGNALS*	variable,type	unimplemented
-*COMPILE-FILE-PATHNAME*	variable,type	unimplemented
-*COMPILE-FILE-TRUENAME*	variable,type	unimplemented
-*COMPILE-PRINT*	variable,type	unimplemented
-*COMPILE-VERBOSE*	variable,type	unimplemented
-*DEBUG-IO*	variable,type	unimplemented
-*DEBUGGER-HOOK*	variable,type	unimplemented
-*DEFAULT-PATHNAME-DEFAULTS*	variable,type	unimplemented
-*ERROR-OUTPUT*	variable,type	unimplemented
-*FEATURES*	variable,type	unimplemented
-*GENSYM-COUNTER*	variable,type	unimplemented
-*LOAD-PATHNAME*	variable,type	unimplemented
-*LOAD-PRINT*	variable,type	unimplemented
-*LOAD-TRUENAME*	variable,type	unimplemented
-*LOAD-VERBOSE*	variable,type	unimplemented
-*MACROEXPAND-HOOK*	variable,type	unimplemented
-*MODULES*	variable,type	unimplemented
-*PACKAGE*	variable,type	unimplemented
-*PRINT-ARRAY*	variable,type	unimplemented
-*PRINT-BASE*	variable,type	unimplemented
-*PRINT-CASE*	variable,type	unimplemented
-*PRINT-CIRCLE*	variable,type	unimplemented
-*PRINT-ESCAPE*	variable,type	unimplemented
-*PRINT-GENSYM*	variable,type	unimplemented
-*PRINT-LENGTH*	variable,type	unimplemented
-*PRINT-LEVEL*	variable,type	unimplemented
-*PRINT-LINES*	variable,type	unimplemented
-*PRINT-MISER-WIDTH*	variable,type	unimplemented
-*PRINT-PPRINT-DISPATCH*	variable,type	unimplemented
-*PRINT-PRETTY*	variable,type	unimplemented
-*PRINT-RADIX*	variable,type	unimplemented
-*PRINT-READABLY*	variable,type	unimplemented
-*PRINT-RIGHT-MARGIN*	variable,type	unimplemented
-*QUERY-IO*	variable,type	unimplemented
-*RANDOM-STATE*	variable,type	unimplemented
-*READ-BASE*	variable,type	unimplemented
-*READ-DEFAULT-FLOAT-FORMAT*	variable,type	unimplemented
-*READ-EVAL*	variable,type	unimplemented
-*READ-SUPPRESS*	variable,type	unimplemented
-*READTABLE*	variable,type	unimplemented
-*STANDARD-INPUT*	variable,type	unimplemented
-*STANDARD-OUTPUT*	variable,type	unimplemented
-*TERMINAL-IO*	variable,type	unimplemented
-*TRACE-OUTPUT*	variable,type	unimplemented
-+	function,variable,type	unimplemented
-++	variable,type	unimplemented
-+++	variable,type	unimplemented
--	function,variable,type	unimplemented
-/	function,variable,type	unimplemented
-//	variable,type	unimplemented
-///	variable,type	unimplemented
-/=	function,type	unimplemented
-1+	function,type	unimplemented
-1-	function,type	unimplemented
-<	function,type	unimplemented
-<=	function,type	unimplemented
-=	function,type	unimplemented
->	function,type	unimplemented
->=	function,type	unimplemented
-ABORT	function,type	unimplemented
-ABS	function,type	unimplemented
-ACONS	function,type	unimplemented
-ACOS	function,type	unimplemented
-ACOSH	function,type	unimplemented
-ADD-METHOD	function,type	unimplemented
-ADJOIN	function,type	unimplemented
-ADJUST-ARRAY	function,type	unimplemented
-ADJUSTABLE-ARRAY-P	function,type	unimplemented
-ALLOCATE-INSTANCE	function,type	unimplemented
-ALPHA-CHAR-P	function,type	unimplemented
-ALPHANUMERICP	function,type	unimplemented
-AND	macro	unimplemented
-APPEND	function,type	unimplemented
-APPLY	function,type	unimplemented
-APROPOS	function,type	unimplemented
-APROPOS-LIST	function,type	unimplemented
-AREF	function,type	unimplemented
-ARITHMETIC-ERROR	type	unimplemented
-ARITHMETIC-ERROR-OPERANDS	function,type	unimplemented
-ARITHMETIC-ERROR-OPERATION	function,type	unimplemented
-ARRAY	type	unimplemented
-ARRAY-DIMENSION	function,type	unimplemented
-ARRAY-DIMENSION-LIMIT	constant,type	unimplemented
-ARRAY-DIMENSIONS	function,type	unimplemented
-ARRAY-DISPLACEMENT	function,type	unimplemented
-ARRAY-ELEMENT-TYPE	function,type	unimplemented
-ARRAY-HAS-FILL-POINTER-P	function,type	unimplemented
-ARRAY-IN-BOUNDS-P	function,type	unimplemented
-ARRAY-RANK	function,type	unimplemented
-ARRAY-RANK-LIMIT	constant,type	unimplemented
-ARRAY-ROW-MAJOR-INDEX	function,type	unimplemented
-ARRAY-TOTAL-SIZE	function,type	unimplemented
-ARRAY-TOTAL-SIZE-LIMIT	constant,type	unimplemented
-ARRAYP	function,type	unimplemented
-ASH	function,type	unimplemented
-ASIN	function,type	unimplemented
-ASINH	function,type	unimplemented
-ASSERT	macro,type	unimplemented
-ASSOC	function,type	unimplemented
-ASSOC-IF	function,type	unimplemented
-ASSOC-IF-NOT	function,type	unimplemented
-ATAN	function,type	unimplemented
-ATANH	function,type	unimplemented
-ATOM	function,type	unimplemented
-BASE-CHAR	type	unimplemented
-BASE-STRING	type	unimplemented
-BIGNUM	type	unimplemented
-BIT	function,type	unimplemented
-BIT-AND	function,type	unimplemented
-BIT-ANDC1	function,type	unimplemented
-BIT-ANDC2	function,type	unimplemented
-BIT-EQV	function,type	unimplemented
-BIT-IOR	function,type	unimplemented
-BIT-NAND	function,type	unimplemented
-BIT-NOR	function,type	unimplemented
-BIT-NOT	function,type	unimplemented
-BIT-ORC1	function,type	unimplemented
-BIT-ORC2	function,type	unimplemented
-BIT-VECTOR	type	unimplemented
-BIT-VECTOR-P	function,type	unimplemented
-BIT-XOR	function,type	unimplemented
-BLOCK	special-operator,type	unimplemented
-BOOLE	function,type	unimplemented
-BOOLE-1	constant,type	unimplemented
-BOOLE-2	constant,type	unimplemented
-BOOLE-AND	constant,type	unimplemented
-BOOLE-ANDC1	constant,type	unimplemented
-BOOLE-ANDC2	constant,type	unimplemented
-BOOLE-C1	constant,type	unimplemented
-BOOLE-C2	constant,type	unimplemented
-BOOLE-CLR	constant,type	unimplemented
-BOOLE-EQV	constant,type	unimplemented
-BOOLE-IOR	constant,type	unimplemented
-BOOLE-NAND	constant,type	unimplemented
-BOOLE-NOR	constant,type	unimplemented
-BOOLE-ORC1	constant,type	unimplemented
-BOOLE-ORC2	constant,type	unimplemented
-BOOLE-SET	constant,type	unimplemented
-BOOLE-XOR	constant,type	unimplemented
-BOOLEAN	type	unimplemented
-BOTH-CASE-P	function,type	unimplemented
-BOUNDP	function,type	unimplemented
-BREAK	function,type	unimplemented
-BROADCAST-STREAM	type	unimplemented
-BROADCAST-STREAM-STREAMS	function,type	unimplemented
-BUILT-IN-CLASS	type	unimplemented
-BUTLAST	function,type	unimplemented
-BYTE	function,type	unimplemented
-BYTE-POSITION	function,type	unimplemented
-BYTE-SIZE	function,type	unimplemented
-CAAAAR	function,type	unimplemented
-CAAADR	function,type	unimplemented
-CAAAR	function,type	unimplemented
-CAADAR	function,type	unimplemented
-CAADDR	function,type	unimplemented
-CAADR	function,type	unimplemented
-CAAR	function,type	unimplemented
-CADAAR	function,type	unimplemented
-CADADR	function,type	unimplemented
-CADAR	function,type	unimplemented
-CADDAR	function,type	unimplemented
-CADDDR	function,type	unimplemented
-CADDR	function,type	unimplemented
-CADR	function,type	unimplemented
-CALL-ARGUMENTS-LIMIT	constant,type	unimplemented
-CALL-METHOD	macro,type	unimplemented
-CALL-NEXT-METHOD	type	unimplemented
-CAR	function,type	unimplemented
-CASE	macro,type	unimplemented
-CATCH	special-operator,type	unimplemented
-CCASE	macro,type	unimplemented
-CDAAAR	function,type	unimplemented
-CDAADR	function,type	unimplemented
-CDAAR	function,type	unimplemented
-CDADAR	function,type	unimplemented
-CDADDR	function,type	unimplemented
-CDADR	function,type	unimplemented
-CDAR	function,type	unimplemented
-CDDAAR	function,type	unimplemented
-CDDADR	function,type	unimplemented
-CDDAR	function,type	unimplemented
-CDDDAR	function,type	unimplemented
-CDDDDR	function,type	unimplemented
-CDDDR	function,type	unimplemented
-CDDR	function,type	unimplemented
-CDR	function,type	unimplemented
-CEILING	function,type	unimplemented
-CELL-ERROR	type	unimplemented
-CELL-ERROR-NAME	function,type	unimplemented
-CERROR	function,type	unimplemented
-CHANGE-CLASS	function,type	unimplemented
-CHAR	function,type	unimplemented
-CHAR-CODE	function,type	unimplemented
-CHAR-CODE-LIMIT	constant,type	unimplemented
-CHAR-DOWNCASE	function,type	unimplemented
-CHAR-EQUAL	function,type	unimplemented
-CHAR-GREATERP	function,type	unimplemented
-CHAR-INT	function,type	unimplemented
-CHAR-LESSP	function,type	unimplemented
-CHAR-NAME	function,type	unimplemented
-CHAR-NOT-EQUAL	function,type	unimplemented
-CHAR-NOT-GREATERP	function,type	unimplemented
-CHAR-NOT-LESSP	function,type	unimplemented
-CHAR-UPCASE	function,type	unimplemented
-CHAR/=	function,type	unimplemented
-CHAR<	function,type	unimplemented
-CHAR<=	function,type	unimplemented
-CHAR=	function,type	unimplemented
-CHAR>	function,type	unimplemented
-CHAR>=	function,type	unimplemented
-CHARACTER	function,type	unimplemented
-CHARACTERP	function,type	unimplemented
-CHECK-TYPE	macro,type	unimplemented
-CIS	function,type	unimplemented
-CLASS	type	unimplemented
-CLASS-NAME	function,type	unimplemented
-CLASS-OF	function,type	unimplemented
-CLEAR-INPUT	function,type	unimplemented
-CLEAR-OUTPUT	function,type	unimplemented
-CLOSE	function,type	unimplemented
-CLRHASH	function,type	unimplemented
-CODE-CHAR	function,type	unimplemented
-COERCE	function,type	unimplemented
-COMPILATION-SPEED	type	unimplemented
-COMPILE	function,type	unimplemented
-COMPILE-FILE	function,type	unimplemented
-COMPILE-FILE-PATHNAME	function,type	unimplemented
-COMPILED-FUNCTION	type	unimplemented
-COMPILED-FUNCTION-P	function,type	unimplemented
-COMPILER-MACRO	type	unimplemented
-COMPILER-MACRO-FUNCTION	function,type	unimplemented
-COMPLEMENT	function,type	unimplemented
-COMPLEX	function,type	unimplemented
-COMPLEXP	function,type	unimplemented
-COMPUTE-APPLICABLE-METHODS	function,type	unimplemented
-COMPUTE-RESTARTS	function,type	unimplemented
-CONCATENATE	function,type	unimplemented
-CONCATENATED-STREAM	type	unimplemented
-CONCATENATED-STREAM-STREAMS	function,type	unimplemented
-COND	macro,type	unimplemented
-CONDITION	type	unimplemented
-CONJUGATE	function,type	unimplemented
-CONS	function,type	unimplemented
-CONSP	function,type	unimplemented
-CONSTANTLY	function,type	unimplemented
-CONSTANTP	function,type	unimplemented
-CONTINUE	function,type	unimplemented
-CONTROL-ERROR	type	unimplemented
-COPY-ALIST	function,type	unimplemented
-COPY-LIST	function,type	unimplemented
-COPY-PPRINT-DISPATCH	function,type	unimplemented
-COPY-READTABLE	function,type	unimplemented
-COPY-SEQ	function,type	unimplemented
-COPY-STRUCTURE	function,type	unimplemented
-COPY-SYMBOL	function,type	unimplemented
-COPY-TREE	function,type	unimplemented
-COS	function,type	unimplemented
-COSH	function,type	unimplemented
-COUNT	function,type	unimplemented
-COUNT-IF	function,type	unimplemented
-COUNT-IF-NOT	function,type	unimplemented
-CTYPECASE	macro,type	unimplemented
-DEBUG	type	unimplemented
-DECF	macro,type	unimplemented
-DECLAIM	macro,type	unimplemented
-DECLARATION	type	unimplemented
-DECLARE	type	unimplemented
-DECODE-FLOAT	function,type	unimplemented
-DECODE-UNIVERSAL-TIME	function,type	unimplemented
-DEFCLASS	macro,type	unimplemented
-DEFCONSTANT	macro,type	unimplemented
-DEFGENERIC	macro,type	unimplemented
-DEFINE-COMPILER-MACRO	macro,type	unimplemented
-DEFINE-CONDITION	macro,type	unimplemented
-DEFINE-METHOD-COMBINATION	macro,type	unimplemented
-DEFINE-MODIFY-MACRO	macro,type	unimplemented
-DEFINE-SETF-EXPANDER	macro,type	unimplemented
-DEFINE-SYMBOL-MACRO	macro,type	unimplemented
-DEFMACRO	macro,type	unimplemented
-DEFMETHOD	macro,type	unimplemented
-DEFPACKAGE	macro,type	unimplemented
-DEFPARAMETER	macro,type	unimplemented
-DEFSETF	macro,type	unimplemented
-DEFSTRUCT	macro,type	unimplemented
-DEFTYPE	macro,type	unimplemented
-DEFUN	macro,type	unimplemented
-DEFVAR	macro,type	unimplemented
-DELETE	function,type	unimplemented
-DELETE-DUPLICATES	function,type	unimplemented
-DELETE-FILE	function,type	unimplemented
-DELETE-IF	function,type	unimplemented
-DELETE-IF-NOT	function,type	unimplemented
-DELETE-PACKAGE	function,type	unimplemented
-DENOMINATOR	function,type	unimplemented
-DEPOSIT-FIELD	function,type	unimplemented
-DESCRIBE	function,type	unimplemented
-DESCRIBE-OBJECT	function,type	unimplemented
-DESTRUCTURING-BIND	macro,type	unimplemented
-DIGIT-CHAR	function,type	unimplemented
-DIGIT-CHAR-P	function,type	unimplemented
-DIRECTORY	function,type	unimplemented
-DIRECTORY-NAMESTRING	function,type	unimplemented
-DISASSEMBLE	function,type	unimplemented
-DIVISION-BY-ZERO	type	unimplemented
-DO	macro,type	unimplemented
-DO*	macro,type	unimplemented
-DO-ALL-SYMBOLS	macro,type	unimplemented
-DO-EXTERNAL-SYMBOLS	macro,type	unimplemented
-DO-SYMBOLS	macro,type	unimplemented
-DOCUMENTATION	function,type	unimplemented
-DOLIST	macro,type	unimplemented
-DOTIMES	macro,type	unimplemented
-DOUBLE-FLOAT	type	unimplemented
-DOUBLE-FLOAT-EPSILON	constant,type	unimplemented
-DOUBLE-FLOAT-NEGATIVE-EPSILON	constant,type	unimplemented
-DPB	function,type	unimplemented
-DRIBBLE	function,type	unimplemented
-DYNAMIC-EXTENT	type	unimplemented
-ECASE	macro,type	unimplemented
-ECHO-STREAM	type	unimplemented
-ECHO-STREAM-INPUT-STREAM	function,type	unimplemented
-ECHO-STREAM-OUTPUT-STREAM	function,type	unimplemented
-ED	function,type	unimplemented
-EIGHTH	function,type	unimplemented
-ELT	function,type	unimplemented
-ENCODE-UNIVERSAL-TIME	function,type	unimplemented
-END-OF-FILE	type	unimplemented
-ENDP	function,type	unimplemented
-ENOUGH-NAMESTRING	function,type	unimplemented
-ENSURE-DIRECTORIES-EXIST	function,type	unimplemented
-ENSURE-GENERIC-FUNCTION	function,type	unimplemented
-EQ	function,type	unimplemented
-EQL	function	unimplemented
-EQUAL	function,type	unimplemented
-EQUALP	function,type	unimplemented
-ERROR	function,type	unimplemented
-ETYPECASE	macro,type	unimplemented
-EVAL	function,type	unimplemented
-EVAL-WHEN	special-operator,type	unimplemented
-EVENP	function,type	unimplemented
-EVERY	function,type	unimplemented
-EXP	function,type	unimplemented
-EXPORT	function,type	unimplemented
-EXPT	function,type	unimplemented
-EXTENDED-CHAR	type	unimplemented
-FBOUNDP	function,type	unimplemented
-FCEILING	function,type	unimplemented
-FDEFINITION	function,type	unimplemented
-FFLOOR	function,type	unimplemented
-FIFTH	function,type	unimplemented
-FILE-AUTHOR	function,type	unimplemented
-FILE-ERROR	type	unimplemented
-FILE-ERROR-PATHNAME	function,type	unimplemented
-FILE-LENGTH	function,type	unimplemented
-FILE-NAMESTRING	function,type	unimplemented
-FILE-POSITION	function,type	unimplemented
-FILE-STREAM	type	unimplemented
-FILE-STRING-LENGTH	function,type	unimplemented
-FILE-WRITE-DATE	function,type	unimplemented
-FILL	function,type	unimplemented
-FILL-POINTER	function,type	unimplemented
-FIND	function,type	unimplemented
-FIND-ALL-SYMBOLS	function,type	unimplemented
-FIND-CLASS	function,type	unimplemented
-FIND-IF	function,type	unimplemented
-FIND-IF-NOT	function,type	unimplemented
-FIND-METHOD	function,type	unimplemented
-FIND-PACKAGE	function,type	unimplemented
-FIND-RESTART	function,type	unimplemented
-FIND-SYMBOL	function,type	unimplemented
-FINISH-OUTPUT	function,type	unimplemented
-FIRST	function,type	unimplemented
-FIXNUM	type	unimplemented
-FLET	special-operator,type	unimplemented
-FLOAT	function,type	unimplemented
-FLOAT-DIGITS	function,type	unimplemented
-FLOAT-PRECISION	function,type	unimplemented
-FLOAT-RADIX	function,type	unimplemented
-FLOAT-SIGN	function,type	unimplemented
-FLOATING-POINT-INEXACT	type	unimplemented
-FLOATING-POINT-INVALID-OPERATION	type	unimplemented
-FLOATING-POINT-OVERFLOW	type	unimplemented
-FLOATING-POINT-UNDERFLOW	type	unimplemented
-FLOATP	function,type	unimplemented
-FLOOR	function,type	unimplemented
-FMAKUNBOUND	function,type	unimplemented
-FORCE-OUTPUT	function,type	unimplemented
-FORMAT	function,type	unimplemented
-FORMATTER	macro,type	unimplemented
-FOURTH	function,type	unimplemented
-FRESH-LINE	function,type	unimplemented
-FROUND	function,type	unimplemented
-FTRUNCATE	function,type	unimplemented
-FTYPE	type	unimplemented
-FUNCALL	function,type	unimplemented
-FUNCTION	special-operator,type	unimplemented
-FUNCTION-KEYWORDS	function,type	unimplemented
-FUNCTION-LAMBDA-EXPRESSION	function,type	unimplemented
-FUNCTIONP	function,type	unimplemented
-GCD	function,type	unimplemented
-GENERIC-FUNCTION	type	unimplemented
-GENSYM	function,type	unimplemented
-GENTEMP	function,type	unimplemented
-GET	function,type	unimplemented
-GET-DECODED-TIME	function,type	unimplemented
-GET-DISPATCH-MACRO-CHARACTER	function,type	unimplemented
-GET-INTERNAL-REAL-TIME	function,type	unimplemented
-GET-INTERNAL-RUN-TIME	function,type	unimplemented
-GET-MACRO-CHARACTER	function,type	unimplemented
-GET-OUTPUT-STREAM-STRING	function,type	unimplemented
-GET-PROPERTIES	function,type	unimplemented
-GET-SETF-EXPANSION	function,type	unimplemented
-GET-UNIVERSAL-TIME	function,type	unimplemented
-GETF	function,type	unimplemented
-GETHASH	function,type	unimplemented
-GO	special-operator,type	unimplemented
-GRAPHIC-CHAR-P	function,type	unimplemented
-HANDLER-BIND	macro,type	unimplemented
-HANDLER-CASE	macro,type	unimplemented
-HASH-TABLE	type	unimplemented
-HASH-TABLE-COUNT	function,type	unimplemented
-HASH-TABLE-P	function,type	unimplemented
-HASH-TABLE-REHASH-SIZE	function,type	unimplemented
-HASH-TABLE-REHASH-THRESHOLD	function,type	unimplemented
-HASH-TABLE-SIZE	function,type	unimplemented
-HASH-TABLE-TEST	function,type	unimplemented
-HOST-NAMESTRING	function,type	unimplemented
-IDENTITY	function,type	unimplemented
-IF	special-operator,type	unimplemented
-IGNORABLE	type	unimplemented
-IGNORE	type	unimplemented
-IGNORE-ERRORS	macro,type	unimplemented
-IMAGPART	function,type	unimplemented
-IMPORT	function,type	unimplemented
-IN-PACKAGE	macro,type	unimplemented
-INCF	macro,type	unimplemented
-INITIALIZE-INSTANCE	function,type	unimplemented
-INLINE	type	unimplemented
-INPUT-STREAM-P	function,type	unimplemented
-INSPECT	function,type	unimplemented
-INTEGER	type	unimplemented
-INTEGER-DECODE-FLOAT	function,type	unimplemented
-INTEGER-LENGTH	function,type	unimplemented
-INTEGERP	function,type	unimplemented
-INTERACTIVE-STREAM-P	function,type	unimplemented
-INTERN	function,type	unimplemented
-INTERNAL-TIME-UNITS-PER-SECOND	constant,type	unimplemented
-INTERSECTION	function,type	unimplemented
-INVALID-METHOD-ERROR	function,type	unimplemented
-INVOKE-DEBUGGER	function,type	unimplemented
-INVOKE-RESTART	function,type	unimplemented
-INVOKE-RESTART-INTERACTIVELY	function,type	unimplemented
-ISQRT	function,type	unimplemented
-KEYWORD	type	unimplemented
-KEYWORDP	function,type	unimplemented
-LABELS	special-operator,type	unimplemented
-LAMBDA	macro,type	unimplemented
-LAMBDA-LIST-KEYWORDS	constant,type	unimplemented
-LAMBDA-PARAMETERS-LIMIT	constant,type	unimplemented
-LAST	function,type	unimplemented
-LCM	function,type	unimplemented
-LDB	function,type	unimplemented
-LDB-TEST	function,type	unimplemented
-LDIFF	function,type	unimplemented
-LEAST-NEGATIVE-DOUBLE-FLOAT	constant,type	unimplemented
-LEAST-NEGATIVE-LONG-FLOAT	constant,type	unimplemented
-LEAST-NEGATIVE-NORMALIZED-DOUBLE-FLOAT	constant,type	unimplemented
-LEAST-NEGATIVE-NORMALIZED-LONG-FLOAT	constant,type	unimplemented
-LEAST-NEGATIVE-NORMALIZED-SHORT-FLOAT	constant,type	unimplemented
-LEAST-NEGATIVE-NORMALIZED-SINGLE-FLOAT	constant,type	unimplemented
-LEAST-NEGATIVE-SHORT-FLOAT	constant,type	unimplemented
-LEAST-NEGATIVE-SINGLE-FLOAT	constant,type	unimplemented
-LEAST-POSITIVE-DOUBLE-FLOAT	constant,type	unimplemented
-LEAST-POSITIVE-LONG-FLOAT	constant,type	unimplemented
-LEAST-POSITIVE-NORMALIZED-DOUBLE-FLOAT	constant,type	unimplemented
-LEAST-POSITIVE-NORMALIZED-LONG-FLOAT	constant,type	unimplemented
-LEAST-POSITIVE-NORMALIZED-SHORT-FLOAT	constant,type	unimplemented
-LEAST-POSITIVE-NORMALIZED-SINGLE-FLOAT	constant,type	unimplemented
-LEAST-POSITIVE-SHORT-FLOAT	constant,type	unimplemented
-LEAST-POSITIVE-SINGLE-FLOAT	constant,type	unimplemented
-LENGTH	function,type	unimplemented
-LET	special-operator,type	unimplemented
-LET*	special-operator,type	unimplemented
-LISP-IMPLEMENTATION-TYPE	function,type	unimplemented
-LISP-IMPLEMENTATION-VERSION	function,type	unimplemented
-LIST	function,type	unimplemented
-LIST*	function,type	unimplemented
-LIST-ALL-PACKAGES	function,type	unimplemented
-LIST-LENGTH	function,type	unimplemented
-LISTEN	function,type	unimplemented
-LISTP	function,type	unimplemented
-LOAD	function,type	unimplemented
-LOAD-LOGICAL-PATHNAME-TRANSLATIONS	function,type	unimplemented
-LOAD-TIME-VALUE	special-operator,type	unimplemented
-LOCALLY	special-operator,type	unimplemented
-LOG	function,type	unimplemented
-LOGAND	function,type	unimplemented
-LOGANDC1	function,type	unimplemented
-LOGANDC2	function,type	unimplemented
-LOGBITP	function,type	unimplemented
-LOGCOUNT	function,type	unimplemented
-LOGEQV	function,type	unimplemented
-LOGICAL-PATHNAME	function,type	unimplemented
-LOGICAL-PATHNAME-TRANSLATIONS	function,type	unimplemented
-LOGIOR	function,type	unimplemented
-LOGNAND	function,type	unimplemented
-LOGNOR	function,type	unimplemented
-LOGNOT	function,type	unimplemented
-LOGORC1	function,type	unimplemented
-LOGORC2	function,type	unimplemented
-LOGTEST	function,type	unimplemented
-LOGXOR	function,type	unimplemented
-LONG-FLOAT	type	unimplemented
-LONG-FLOAT-EPSILON	constant,type	unimplemented
-LONG-FLOAT-NEGATIVE-EPSILON	constant,type	unimplemented
-LONG-SITE-NAME	function,type	unimplemented
-LOOP	macro,type	unimplemented
-LOOP-FINISH	macro,type	unimplemented
-LOWER-CASE-P	function,type	unimplemented
-MACHINE-INSTANCE	function,type	unimplemented
-MACHINE-TYPE	function,type	unimplemented
-MACHINE-VERSION	function,type	unimplemented
-MACRO-FUNCTION	function,type	unimplemented
-MACROEXPAND	function,type	unimplemented
-MACROEXPAND-1	function,type	unimplemented
-MACROLET	special-operator,type	unimplemented
-MAKE-ARRAY	function,type	unimplemented
-MAKE-BROADCAST-STREAM	function,type	unimplemented
-MAKE-CONCATENATED-STREAM	function,type	unimplemented
-MAKE-CONDITION	function,type	unimplemented
-MAKE-DISPATCH-MACRO-CHARACTER	function,type	unimplemented
-MAKE-ECHO-STREAM	function,type	unimplemented
-MAKE-HASH-TABLE	function,type	unimplemented
-MAKE-INSTANCE	function,type	unimplemented
-MAKE-INSTANCES-OBSOLETE	function,type	unimplemented
-MAKE-LIST	function,type	unimplemented
-MAKE-LOAD-FORM	function,type	unimplemented
-MAKE-LOAD-FORM-SAVING-SLOTS	function,type	unimplemented
-MAKE-METHOD	type	unimplemented
-MAKE-PACKAGE	function,type	unimplemented
-MAKE-PATHNAME	function,type	unimplemented
-MAKE-RANDOM-STATE	function,type	unimplemented
-MAKE-SEQUENCE	function,type	unimplemented
-MAKE-STRING	function,type	unimplemented
-MAKE-STRING-INPUT-STREAM	function,type	unimplemented
-MAKE-STRING-OUTPUT-STREAM	function,type	unimplemented
-MAKE-SYMBOL	function,type	unimplemented
-MAKE-SYNONYM-STREAM	function,type	unimplemented
-MAKE-TWO-WAY-STREAM	function,type	unimplemented
-MAKUNBOUND	function,type	unimplemented
-MAP	function,type	unimplemented
-MAP-INTO	function,type	unimplemented
-MAPC	function,type	unimplemented
-MAPCAN	function,type	unimplemented
-MAPCAR	function,type	unimplemented
-MAPCON	function,type	unimplemented
-MAPHASH	function,type	unimplemented
-MAPL	function,type	unimplemented
-MAPLIST	function,type	unimplemented
-MASK-FIELD	function,type	unimplemented
-MAX	function,type	unimplemented
-MEMBER	function	unimplemented
-MEMBER-IF	function,type	unimplemented
-MEMBER-IF-NOT	function,type	unimplemented
-MERGE	function,type	unimplemented
-MERGE-PATHNAMES	function,type	unimplemented
-METHOD	type	unimplemented
-METHOD-COMBINATION	type	unimplemented
-METHOD-COMBINATION-ERROR	function,type	unimplemented
-METHOD-QUALIFIERS	function,type	unimplemented
-MIN	function,type	unimplemented
-MINUSP	function,type	unimplemented
-MISMATCH	function,type	unimplemented
-MOD	function	unimplemented
-MOST-NEGATIVE-DOUBLE-FLOAT	constant,type	unimplemented
-MOST-NEGATIVE-FIXNUM	constant,type	unimplemented
-MOST-NEGATIVE-LONG-FLOAT	constant,type	unimplemented
-MOST-NEGATIVE-SHORT-FLOAT	constant,type	unimplemented
-MOST-NEGATIVE-SINGLE-FLOAT	constant,type	unimplemented
-MOST-POSITIVE-DOUBLE-FLOAT	constant,type	unimplemented
-MOST-POSITIVE-FIXNUM	constant,type	unimplemented
-MOST-POSITIVE-LONG-FLOAT	constant,type	unimplemented
-MOST-POSITIVE-SHORT-FLOAT	constant,type	unimplemented
-MOST-POSITIVE-SINGLE-FLOAT	constant,type	unimplemented
-MUFFLE-WARNING	function,type	unimplemented
-MULTIPLE-VALUE-BIND	macro,type	unimplemented
-MULTIPLE-VALUE-CALL	special-operator,type	unimplemented
-MULTIPLE-VALUE-LIST	macro,type	unimplemented
-MULTIPLE-VALUE-PROG1	special-operator,type	unimplemented
-MULTIPLE-VALUE-SETQ	macro,type	unimplemented
-MULTIPLE-VALUES-LIMIT	constant,type	unimplemented
-NAME-CHAR	function,type	unimplemented
-NAMESTRING	function,type	unimplemented
-NBUTLAST	function,type	unimplemented
-NCONC	function,type	unimplemented
-NEXT-METHOD-P	type	unimplemented
-NIL	constant,type	partial
-NINTERSECTION	function,type	unimplemented
-NINTH	function,type	unimplemented
-NO-APPLICABLE-METHOD	function,type	unimplemented
-NO-NEXT-METHOD	function,type	unimplemented
-NOT	function	unimplemented
-NOTANY	function,type	unimplemented
-NOTEVERY	function,type	unimplemented
-NOTINLINE	type	unimplemented
-NRECONC	function,type	unimplemented
-NREVERSE	function,type	unimplemented
-NSET-DIFFERENCE	function,type	unimplemented
-NSET-EXCLUSIVE-OR	function,type	unimplemented
-NSTRING-CAPITALIZE	function,type	unimplemented
-NSTRING-DOWNCASE	function,type	unimplemented
-NSTRING-UPCASE	function,type	unimplemented
-NSUBLIS	function,type	unimplemented
-NSUBST	function,type	unimplemented
-NSUBST-IF	function,type	unimplemented
-NSUBST-IF-NOT	function,type	unimplemented
-NSUBSTITUTE	function,type	unimplemented
-NSUBSTITUTE-IF	function,type	unimplemented
-NSUBSTITUTE-IF-NOT	function,type	unimplemented
-NTH	function,type	unimplemented
-NTH-VALUE	macro,type	unimplemented
-NTHCDR	function,type	unimplemented
-NULL	function,type	unimplemented
-NUMBER	type	unimplemented
-NUMBERP	function,type	unimplemented
-NUMERATOR	function,type	unimplemented
-NUNION	function,type	unimplemented
-ODDP	function,type	unimplemented
-OPEN	function,type	unimplemented
-OPEN-STREAM-P	function,type	unimplemented
-OPTIMIZE	type	unimplemented
-OR	macro	unimplemented
-OTHERWISE	type	unimplemented
-OUTPUT-STREAM-P	function,type	unimplemented
-PACKAGE	type	unimplemented
-PACKAGE-ERROR	type	unimplemented
-PACKAGE-ERROR-PACKAGE	function,type	unimplemented
-PACKAGE-NAME	function,type	unimplemented
-PACKAGE-NICKNAMES	function,type	unimplemented
-PACKAGE-SHADOWING-SYMBOLS	function,type	unimplemented
-PACKAGE-USE-LIST	function,type	unimplemented
-PACKAGE-USED-BY-LIST	function,type	unimplemented
-PACKAGEP	function,type	unimplemented
-PAIRLIS	function,type	unimplemented
-PARSE-ERROR	type	unimplemented
-PARSE-INTEGER	function,type	unimplemented
-PARSE-NAMESTRING	function,type	unimplemented
-PATHNAME	function,type	unimplemented
-PATHNAME-DEVICE	function,type	unimplemented
-PATHNAME-DIRECTORY	function,type	unimplemented
-PATHNAME-HOST	function,type	unimplemented
-PATHNAME-MATCH-P	function,type	unimplemented
-PATHNAME-NAME	function,type	unimplemented
-PATHNAME-TYPE	function,type	unimplemented
-PATHNAME-VERSION	function,type	unimplemented
-PATHNAMEP	function,type	unimplemented
-PEEK-CHAR	function,type	unimplemented
-PHASE	function,type	unimplemented
-PI	constant,type	unimplemented
-PLUSP	function,type	unimplemented
-POP	macro,type	unimplemented
-POSITION	function,type	unimplemented
-POSITION-IF	function,type	unimplemented
-POSITION-IF-NOT	function,type	unimplemented
-PPRINT	function,type	unimplemented
-PPRINT-DISPATCH	function,type	unimplemented
-PPRINT-EXIT-IF-LIST-EXHAUSTED	macro,type	unimplemented
-PPRINT-FILL	function,type	unimplemented
-PPRINT-INDENT	function,type	unimplemented
-PPRINT-LINEAR	function,type	unimplemented
-PPRINT-LOGICAL-BLOCK	macro,type	unimplemented
-PPRINT-NEWLINE	function,type	unimplemented
-PPRINT-POP	macro,type	unimplemented
-PPRINT-TAB	function,type	unimplemented
-PPRINT-TABULAR	function,type	unimplemented
-PRIN1	function,type	unimplemented
-PRIN1-TO-STRING	function,type	unimplemented
-PRINC	function,type	unimplemented
-PRINC-TO-STRING	function,type	unimplemented
-PRINT	function,type	unimplemented
-PRINT-NOT-READABLE	type	unimplemented
-PRINT-NOT-READABLE-OBJECT	function,type	unimplemented
-PRINT-OBJECT	function,type	unimplemented
-PRINT-UNREADABLE-OBJECT	macro,type	unimplemented
-PROBE-FILE	function,type	unimplemented
-PROCLAIM	function,type	unimplemented
-PROG	macro,type	unimplemented
-PROG*	macro,type	unimplemented
-PROG1	macro,type	unimplemented
-PROG2	macro,type	unimplemented
-PROGN	special-operator,type	unimplemented
-PROGRAM-ERROR	type	unimplemented
-PROGV	special-operator,type	unimplemented
-PROVIDE	function,type	unimplemented
-PSETF	macro,type	unimplemented
-PSETQ	macro,type	unimplemented
-PUSH	macro,type	unimplemented
-PUSHNEW	macro,type	unimplemented
-QUOTE	special-operator,type	unimplemented
-RANDOM	function,type	unimplemented
-RANDOM-STATE	type	unimplemented
-RANDOM-STATE-P	function,type	unimplemented
-RASSOC	function,type	unimplemented
-RASSOC-IF	function,type	unimplemented
-RASSOC-IF-NOT	function,type	unimplemented
-RATIO	type	unimplemented
-RATIONAL	function,type	unimplemented
-RATIONALIZE	function,type	unimplemented
-RATIONALP	function,type	unimplemented
-READ	function,type	unimplemented
-READ-BYTE	function,type	unimplemented
-READ-CHAR	function,type	unimplemented
-READ-CHAR-NO-HANG	function,type	unimplemented
-READ-DELIMITED-LIST	function,type	unimplemented
-READ-FROM-STRING	function,type	unimplemented
-READ-LINE	function,type	unimplemented
-READ-PRESERVING-WHITESPACE	function,type	unimplemented
-READ-SEQUENCE	function,type	unimplemented
-READER-ERROR	type	unimplemented
-READTABLE	type	unimplemented
-READTABLE-CASE	function,type	unimplemented
-READTABLEP	function,type	unimplemented
-REAL	type	unimplemented
-REALP	function,type	unimplemented
-REALPART	function,type	unimplemented
-REDUCE	function,type	unimplemented
-REINITIALIZE-INSTANCE	function,type	unimplemented
-REM	function,type	unimplemented
-REMF	macro,type	unimplemented
-REMHASH	function,type	unimplemented
-REMOVE	function,type	unimplemented
-REMOVE-DUPLICATES	function,type	unimplemented
-REMOVE-IF	function,type	unimplemented
-REMOVE-IF-NOT	function,type	unimplemented
-REMOVE-METHOD	function,type	unimplemented
-REMPROP	function,type	unimplemented
-RENAME-FILE	function,type	unimplemented
-RENAME-PACKAGE	function,type	unimplemented
-REPLACE	function,type	unimplemented
-REQUIRE	function,type	unimplemented
-REST	function,type	unimplemented
-RESTART	type	unimplemented
-RESTART-BIND	macro,type	unimplemented
-RESTART-CASE	macro,type	unimplemented
-RESTART-NAME	function,type	unimplemented
-RETURN	macro,type	unimplemented
-RETURN-FROM	special-operator,type	unimplemented
-REVAPPEND	function,type	unimplemented
-REVERSE	function,type	unimplemented
-ROOM	function,type	unimplemented
-ROTATEF	macro,type	unimplemented
-ROUND	function,type	unimplemented
-ROW-MAJOR-AREF	function,type	unimplemented
-RPLACA	function,type	unimplemented
-RPLACD	function,type	unimplemented
-SAFETY	type	unimplemented
-SATISFIES	symbol	unimplemented
-SBIT	function,type	unimplemented
-SCALE-FLOAT	function,type	unimplemented
-SCHAR	function,type	unimplemented
-SEARCH	function,type	unimplemented
-SECOND	function,type	unimplemented
-SEQUENCE	type	unimplemented
-SERIOUS-CONDITION	type	unimplemented
-SET	function,type	unimplemented
-SET-DIFFERENCE	function,type	unimplemented
-SET-DISPATCH-MACRO-CHARACTER	function,type	unimplemented
-SET-EXCLUSIVE-OR	function,type	unimplemented
-SET-MACRO-CHARACTER	function,type	unimplemented
-SET-PPRINT-DISPATCH	function,type	unimplemented
-SET-SYNTAX-FROM-CHAR	function,type	unimplemented
-SETF	macro,type	unimplemented
-SETQ	special-operator,type	unimplemented
-SEVENTH	function,type	unimplemented
-SHADOW	function,type	unimplemented
-SHADOWING-IMPORT	function,type	unimplemented
-SHARED-INITIALIZE	function,type	unimplemented
-SHIFTF	macro,type	unimplemented
-SHORT-FLOAT	type	unimplemented
-SHORT-FLOAT-EPSILON	constant,type	unimplemented
-SHORT-FLOAT-NEGATIVE-EPSILON	constant,type	unimplemented
-SHORT-SITE-NAME	function,type	unimplemented
-SIGNAL	function,type	unimplemented
-SIGNED-BYTE	type	unimplemented
-SIGNUM	function,type	unimplemented
-SIMPLE-ARRAY	type	unimplemented
-SIMPLE-BASE-STRING	type	unimplemented
-SIMPLE-BIT-VECTOR	type	unimplemented
-SIMPLE-BIT-VECTOR-P	function,type	unimplemented
-SIMPLE-CONDITION	type	unimplemented
-SIMPLE-CONDITION-FORMAT-ARGUMENTS	function,type	unimplemented
-SIMPLE-CONDITION-FORMAT-CONTROL	function,type	unimplemented
-SIMPLE-ERROR	type	unimplemented
-SIMPLE-STRING	type	unimplemented
-SIMPLE-STRING-P	function,type	unimplemented
-SIMPLE-TYPE-ERROR	type	unimplemented
-SIMPLE-VECTOR	type	unimplemented
-SIMPLE-VECTOR-P	function,type	unimplemented
-SIMPLE-WARNING	type	unimplemented
-SIN	function,type	unimplemented
-SINGLE-FLOAT	type	unimplemented
-SINGLE-FLOAT-EPSILON	constant,type	unimplemented
-SINGLE-FLOAT-NEGATIVE-EPSILON	constant,type	unimplemented
-SINH	function,type	unimplemented
-SIXTH	function,type	unimplemented
-SLEEP	function,type	unimplemented
-SLOT-BOUNDP	function,type	unimplemented
-SLOT-EXISTS-P	function,type	unimplemented
-SLOT-MAKUNBOUND	function,type	unimplemented
-SLOT-MISSING	function,type	unimplemented
-SLOT-UNBOUND	function,type	unimplemented
-SLOT-VALUE	function,type	unimplemented
-SOFTWARE-TYPE	function,type	unimplemented
-SOFTWARE-VERSION	function,type	unimplemented
-SOME	function,type	unimplemented
-SORT	function,type	unimplemented
-SPACE	type	unimplemented
-SPECIAL	type	unimplemented
-SPECIAL-OPERATOR-P	function,type	unimplemented
-SPEED	type	unimplemented
-SQRT	function,type	unimplemented
-STABLE-SORT	function,type	unimplemented
-STANDARD	type	unimplemented
-STANDARD-CHAR	type	unimplemented
-STANDARD-CHAR-P	function,type	unimplemented
-STANDARD-CLASS	type	unimplemented
-STANDARD-GENERIC-FUNCTION	type	unimplemented
-STANDARD-METHOD	type	unimplemented
-STANDARD-OBJECT	type	unimplemented
-STEP	macro,type	unimplemented
-STORAGE-CONDITION	type	unimplemented
-STORE-VALUE	function,type	unimplemented
-STREAM	type	unimplemented
-STREAM-ELEMENT-TYPE	function,type	unimplemented
-STREAM-ERROR	type	unimplemented
-STREAM-ERROR-STREAM	function,type	unimplemented
-STREAM-EXTERNAL-FORMAT	function,type	unimplemented
-STREAMP	function,type	unimplemented
-STRING	function,type	unimplemented
-STRING-CAPITALIZE	function,type	unimplemented
-STRING-DOWNCASE	function,type	unimplemented
-STRING-EQUAL	function,type	unimplemented
-STRING-GREATERP	function,type	unimplemented
-STRING-LEFT-TRIM	function,type	unimplemented
-STRING-LESSP	function,type	unimplemented
-STRING-NOT-EQUAL	function,type	unimplemented
-STRING-NOT-GREATERP	function,type	unimplemented
-STRING-NOT-LESSP	function,type	unimplemented
-STRING-RIGHT-TRIM	function,type	unimplemented
-STRING-STREAM	type	unimplemented
-STRING-TRIM	function,type	unimplemented
-STRING-UPCASE	function,type	unimplemented
-STRING/=	function,type	unimplemented
-STRING<	function,type	unimplemented
-STRING<=	function,type	unimplemented
-STRING=	function,type	unimplemented
-STRING>	function,type	unimplemented
-STRING>=	function,type	unimplemented
-STRINGP	function,type	unimplemented
-STRUCTURE	type	unimplemented
-STRUCTURE-CLASS	type	unimplemented
-STRUCTURE-OBJECT	type	unimplemented
-STYLE-WARNING	type	unimplemented
-SUBLIS	function,type	unimplemented
-SUBSEQ	function,type	unimplemented
-SUBSETP	function,type	unimplemented
-SUBST	function,type	unimplemented
-SUBST-IF	function,type	unimplemented
-SUBST-IF-NOT	function,type	unimplemented
-SUBSTITUTE	function,type	unimplemented
-SUBSTITUTE-IF	function,type	unimplemented
-SUBSTITUTE-IF-NOT	function,type	unimplemented
-SUBTYPEP	function,type	unimplemented
-SVREF	function,type	unimplemented
-SXHASH	function,type	unimplemented
-SYMBOL	type	unimplemented
-SYMBOL-FUNCTION	function,type	unimplemented
-SYMBOL-MACROLET	special-operator,type	unimplemented
-SYMBOL-NAME	function,type	unimplemented
-SYMBOL-PACKAGE	function,type	unimplemented
-SYMBOL-PLIST	function,type	unimplemented
-SYMBOL-VALUE	function,type	unimplemented
-SYMBOLP	function,type	unimplemented
-SYNONYM-STREAM	type	unimplemented
-SYNONYM-STREAM-SYMBOL	function,type	unimplemented
-T	constant,type	partial
-TAGBODY	special-operator,type	unimplemented
-TAILP	function,type	unimplemented
-TAN	function,type	unimplemented
-TANH	function,type	unimplemented
-TENTH	function,type	unimplemented
-TERPRI	function,type	unimplemented
-THE	special-operator,type	unimplemented
-THIRD	function,type	unimplemented
-THROW	special-operator,type	unimplemented
-TIME	macro,type	unimplemented
-TRACE	macro,type	unimplemented
-TRANSLATE-LOGICAL-PATHNAME	function,type	unimplemented
-TRANSLATE-PATHNAME	function,type	unimplemented
-TREE-EQUAL	function,type	unimplemented
-TRUENAME	function,type	unimplemented
-TRUNCATE	function,type	unimplemented
-TWO-WAY-STREAM	type	unimplemented
-TWO-WAY-STREAM-INPUT-STREAM	function,type	unimplemented
-TWO-WAY-STREAM-OUTPUT-STREAM	function,type	unimplemented
-TYPE	type	unimplemented
-TYPE-ERROR	type	unimplemented
-TYPE-ERROR-DATUM	function,type	unimplemented
-TYPE-ERROR-EXPECTED-TYPE	function,type	unimplemented
-TYPE-OF	function,type	unimplemented
-TYPECASE	macro,type	unimplemented
-TYPEP	function,type	unimplemented
-UNBOUND-SLOT	type	unimplemented
-UNBOUND-SLOT-INSTANCE	function,type	unimplemented
-UNBOUND-VARIABLE	type	unimplemented
-UNDEFINED-FUNCTION	type	unimplemented
-UNEXPORT	function,type	unimplemented
-UNINTERN	function,type	unimplemented
-UNION	function,type	unimplemented
-UNLESS	macro,type	unimplemented
-UNREAD-CHAR	function,type	unimplemented
-UNSIGNED-BYTE	type	unimplemented
-UNTRACE	macro,type	unimplemented
-UNUSE-PACKAGE	function,type	unimplemented
-UNWIND-PROTECT	special-operator,type	unimplemented
-UPDATE-INSTANCE-FOR-DIFFERENT-CLASS	function,type	unimplemented
-UPDATE-INSTANCE-FOR-REDEFINED-CLASS	function,type	unimplemented
-UPGRADED-ARRAY-ELEMENT-TYPE	function,type	unimplemented
-UPGRADED-COMPLEX-PART-TYPE	function,type	unimplemented
-UPPER-CASE-P	function,type	unimplemented
-USE-PACKAGE	function,type	unimplemented
-USE-VALUE	function,type	unimplemented
-USER-HOMEDIR-PATHNAME	function,type	unimplemented
-VALUES	function	unimplemented
-VALUES-LIST	function,type	unimplemented
-VARIABLE	type	unimplemented
-VECTOR	function,type	unimplemented
-VECTOR-POP	function,type	unimplemented
-VECTOR-PUSH	function,type	unimplemented
-VECTOR-PUSH-EXTEND	function,type	unimplemented
-VECTORP	function,type	unimplemented
-WARN	function,type	unimplemented
-WARNING	type	unimplemented
-WHEN	macro,type	unimplemented
-WILD-PATHNAME-P	function,type	unimplemented
-WITH-ACCESSORS	macro,type	unimplemented
-WITH-COMPILATION-UNIT	macro,type	unimplemented
-WITH-CONDITION-RESTARTS	macro,type	unimplemented
-WITH-HASH-TABLE-ITERATOR	macro,type	unimplemented
-WITH-INPUT-FROM-STRING	macro,type	unimplemented
-WITH-OPEN-FILE	macro,type	unimplemented
-WITH-OPEN-STREAM	macro,type	unimplemented
-WITH-OUTPUT-TO-STRING	macro,type	unimplemented
-WITH-PACKAGE-ITERATOR	macro,type	unimplemented
-WITH-SIMPLE-RESTART	macro,type	unimplemented
-WITH-SLOTS	macro,type	unimplemented
-WITH-STANDARD-IO-SYNTAX	macro,type	unimplemented
-WRITE	function,type	unimplemented
-WRITE-BYTE	function,type	unimplemented
-WRITE-CHAR	function,type	unimplemented
-WRITE-LINE	function,type	unimplemented
-WRITE-SEQUENCE	function,type	unimplemented
-WRITE-STRING	function,type	unimplemented
-WRITE-TO-STRING	function,type	unimplemented
-Y-OR-N-P	function,type	unimplemented
-YES-OR-NO-P	function,type	unimplemented
-ZEROP	function,type	unimplemented
+name	kind	status	profiles
+&ALLOW-OTHER-KEYS	symbol,syntax-marker	partial	dev
+&AUX	symbol,syntax-marker	partial	dev
+&BODY	symbol,syntax-marker	partial	dev
+&ENVIRONMENT	symbol,syntax-marker	partial	dev
+&KEY	symbol,syntax-marker	partial	dev
+&OPTIONAL	symbol,syntax-marker	partial	dev
+&REST	symbol,syntax-marker	partial	dev
+&WHOLE	symbol,syntax-marker	partial	dev
+*	function,variable,type	partial	dev
+**	variable	unimplemented	none
+***	variable	unimplemented	none
+*BREAK-ON-SIGNALS*	variable	unimplemented	none
+*COMPILE-FILE-PATHNAME*	variable	unimplemented	none
+*COMPILE-FILE-TRUENAME*	variable	unimplemented	none
+*COMPILE-PRINT*	variable	unimplemented	none
+*COMPILE-VERBOSE*	variable	unimplemented	none
+*DEBUG-IO*	variable	unimplemented	none
+*DEBUGGER-HOOK*	variable	unimplemented	none
+*DEFAULT-PATHNAME-DEFAULTS*	variable	unimplemented	none
+*ERROR-OUTPUT*	variable	unimplemented	none
+*FEATURES*	variable	partial	dev
+*GENSYM-COUNTER*	variable	partial	dev
+*LOAD-PATHNAME*	variable	unimplemented	none
+*LOAD-PRINT*	variable	unimplemented	none
+*LOAD-TRUENAME*	variable	unimplemented	none
+*LOAD-VERBOSE*	variable	unimplemented	none
+*MACROEXPAND-HOOK*	variable	unimplemented	none
+*MODULES*	variable	unimplemented	none
+*PACKAGE*	variable	partial	dev
+*PRINT-ARRAY*	variable	unimplemented	none
+*PRINT-BASE*	variable	unimplemented	none
+*PRINT-CASE*	variable	unimplemented	none
+*PRINT-CIRCLE*	variable	unimplemented	none
+*PRINT-ESCAPE*	variable	unimplemented	none
+*PRINT-GENSYM*	variable	unimplemented	none
+*PRINT-LENGTH*	variable	unimplemented	none
+*PRINT-LEVEL*	variable	unimplemented	none
+*PRINT-LINES*	variable	unimplemented	none
+*PRINT-MISER-WIDTH*	variable	unimplemented	none
+*PRINT-PPRINT-DISPATCH*	variable	unimplemented	none
+*PRINT-PRETTY*	variable	unimplemented	none
+*PRINT-RADIX*	variable	unimplemented	none
+*PRINT-READABLY*	variable	unimplemented	none
+*PRINT-RIGHT-MARGIN*	variable	unimplemented	none
+*QUERY-IO*	variable	unimplemented	none
+*RANDOM-STATE*	variable	unimplemented	none
+*READ-BASE*	variable	unimplemented	none
+*READ-DEFAULT-FLOAT-FORMAT*	variable	unimplemented	none
+*READ-EVAL*	variable	partial	dev
+*READ-SUPPRESS*	variable	unimplemented	none
+*READTABLE*	variable	unimplemented	none
+*STANDARD-INPUT*	variable	unimplemented	none
+*STANDARD-OUTPUT*	variable	partial	dev
+*TERMINAL-IO*	variable	unimplemented	none
+*TRACE-OUTPUT*	variable	unimplemented	none
++	function,variable	partial	dev
+++	variable	unimplemented	none
++++	variable	unimplemented	none
+-	function,variable	partial	dev
+/	function,variable	partial	dev
+//	variable	unimplemented	none
+///	variable	unimplemented	none
+/=	function	partial	dev
+1+	function	partial	dev
+1-	function	partial	dev
+<	function	partial	dev
+<=	function	partial	dev
+=	function	partial	dev
+>	function	partial	dev
+>=	function	partial	dev
+ABORT	function	unimplemented	none
+ABS	function	partial	dev
+ACONS	function	unimplemented	none
+ACOS	function	unimplemented	none
+ACOSH	function	unimplemented	none
+ADD-METHOD	function	unimplemented	none
+ADJOIN	function	unimplemented	none
+ADJUST-ARRAY	function	unimplemented	none
+ADJUSTABLE-ARRAY-P	function	unimplemented	none
+ALLOCATE-INSTANCE	function	unimplemented	none
+ALPHA-CHAR-P	function	unimplemented	none
+ALPHANUMERICP	function	unimplemented	none
+AND	macro	partial	dev
+APPEND	function	partial	dev
+APPLY	function	partial	dev
+APROPOS	function	unimplemented	none
+APROPOS-LIST	function	unimplemented	none
+AREF	function	unimplemented	none
+ARITHMETIC-ERROR	type	unimplemented	none
+ARITHMETIC-ERROR-OPERANDS	function	unimplemented	none
+ARITHMETIC-ERROR-OPERATION	function	unimplemented	none
+ARRAY	type	unimplemented	none
+ARRAY-DIMENSION	function	unimplemented	none
+ARRAY-DIMENSION-LIMIT	constant	unimplemented	none
+ARRAY-DIMENSIONS	function	unimplemented	none
+ARRAY-DISPLACEMENT	function	unimplemented	none
+ARRAY-ELEMENT-TYPE	function	unimplemented	none
+ARRAY-HAS-FILL-POINTER-P	function	unimplemented	none
+ARRAY-IN-BOUNDS-P	function	unimplemented	none
+ARRAY-RANK	function	unimplemented	none
+ARRAY-RANK-LIMIT	constant	unimplemented	none
+ARRAY-ROW-MAJOR-INDEX	function	unimplemented	none
+ARRAY-TOTAL-SIZE	function	unimplemented	none
+ARRAY-TOTAL-SIZE-LIMIT	constant	unimplemented	none
+ARRAYP	function	unimplemented	none
+ASH	function	partial	dev
+ASIN	function	unimplemented	none
+ASINH	function	unimplemented	none
+ASSERT	macro	unimplemented	none
+ASSOC	function	partial	dev
+ASSOC-IF	function	unimplemented	none
+ASSOC-IF-NOT	function	unimplemented	none
+ATAN	function	partial	dev
+ATANH	function	unimplemented	none
+ATOM	function,type	partial	dev
+BASE-CHAR	type	unimplemented	none
+BASE-STRING	type	unimplemented	none
+BIGNUM	type	unimplemented	none
+BIT	function,type	unimplemented	none
+BIT-AND	function	unimplemented	none
+BIT-ANDC1	function	unimplemented	none
+BIT-ANDC2	function	unimplemented	none
+BIT-EQV	function	unimplemented	none
+BIT-IOR	function	unimplemented	none
+BIT-NAND	function	unimplemented	none
+BIT-NOR	function	unimplemented	none
+BIT-NOT	function	unimplemented	none
+BIT-ORC1	function	unimplemented	none
+BIT-ORC2	function	unimplemented	none
+BIT-VECTOR	type	unimplemented	none
+BIT-VECTOR-P	function	unimplemented	none
+BIT-XOR	function	unimplemented	none
+BLOCK	special-operator	partial	dev
+BOOLE	function	unimplemented	none
+BOOLE-1	constant	unimplemented	none
+BOOLE-2	constant	unimplemented	none
+BOOLE-AND	constant	unimplemented	none
+BOOLE-ANDC1	constant	unimplemented	none
+BOOLE-ANDC2	constant	unimplemented	none
+BOOLE-C1	constant	unimplemented	none
+BOOLE-C2	constant	unimplemented	none
+BOOLE-CLR	constant	unimplemented	none
+BOOLE-EQV	constant	unimplemented	none
+BOOLE-IOR	constant	unimplemented	none
+BOOLE-NAND	constant	unimplemented	none
+BOOLE-NOR	constant	unimplemented	none
+BOOLE-ORC1	constant	unimplemented	none
+BOOLE-ORC2	constant	unimplemented	none
+BOOLE-SET	constant	unimplemented	none
+BOOLE-XOR	constant	unimplemented	none
+BOOLEAN	type	unimplemented	none
+BOTH-CASE-P	function	unimplemented	none
+BOUNDP	function	partial	dev
+BREAK	function	unimplemented	none
+BROADCAST-STREAM	type	unimplemented	none
+BROADCAST-STREAM-STREAMS	function	unimplemented	none
+BUILT-IN-CLASS	type	unimplemented	none
+BUTLAST	function	unimplemented	none
+BYTE	function	unimplemented	none
+BYTE-POSITION	function	unimplemented	none
+BYTE-SIZE	function	unimplemented	none
+CAAAAR	function	unimplemented	none
+CAAADR	function	unimplemented	none
+CAAAR	function	unimplemented	none
+CAADAR	function	unimplemented	none
+CAADDR	function	unimplemented	none
+CAADR	function	partial	dev
+CAAR	function	partial	dev
+CADAAR	function	unimplemented	none
+CADADR	function	unimplemented	none
+CADAR	function	partial	dev
+CADDAR	function	unimplemented	none
+CADDDR	function	partial	dev
+CADDR	function	partial	dev
+CADR	function	partial	dev
+CALL-ARGUMENTS-LIMIT	constant	unimplemented	none
+CALL-METHOD	macro	unimplemented	none
+CALL-NEXT-METHOD	symbol	unimplemented	none
+CAR	function	partial	dev
+CASE	macro	unimplemented	none
+CATCH	special-operator	partial	dev
+CCASE	macro	unimplemented	none
+CDAAAR	function	unimplemented	none
+CDAADR	function	unimplemented	none
+CDAAR	function	unimplemented	none
+CDADAR	function	unimplemented	none
+CDADDR	function	unimplemented	none
+CDADR	function	unimplemented	none
+CDAR	function	partial	dev
+CDDAAR	function	unimplemented	none
+CDDADR	function	unimplemented	none
+CDDAR	function	unimplemented	none
+CDDDAR	function	unimplemented	none
+CDDDDR	function	unimplemented	none
+CDDDR	function	partial	dev
+CDDR	function	partial	dev
+CDR	function	partial	dev
+CEILING	function	partial	dev
+CELL-ERROR	type	unimplemented	none
+CELL-ERROR-NAME	function	unimplemented	none
+CERROR	function	unimplemented	none
+CHANGE-CLASS	function	unimplemented	none
+CHAR	function	unimplemented	none
+CHAR-CODE	function	partial	dev
+CHAR-CODE-LIMIT	constant	unimplemented	none
+CHAR-DOWNCASE	function	unimplemented	none
+CHAR-EQUAL	function	unimplemented	none
+CHAR-GREATERP	function	unimplemented	none
+CHAR-INT	function	unimplemented	none
+CHAR-LESSP	function	unimplemented	none
+CHAR-NAME	function	unimplemented	none
+CHAR-NOT-EQUAL	function	unimplemented	none
+CHAR-NOT-GREATERP	function	unimplemented	none
+CHAR-NOT-LESSP	function	unimplemented	none
+CHAR-UPCASE	function	unimplemented	none
+CHAR/=	function	unimplemented	none
+CHAR<	function	unimplemented	none
+CHAR<=	function	unimplemented	none
+CHAR=	function	unimplemented	none
+CHAR>	function	unimplemented	none
+CHAR>=	function	unimplemented	none
+CHARACTER	function,type	unimplemented	none
+CHARACTERP	function	partial	dev
+CHECK-TYPE	macro	unimplemented	none
+CIS	function	unimplemented	none
+CLASS	type	unimplemented	none
+CLASS-NAME	function	unimplemented	none
+CLASS-OF	function	unimplemented	none
+CLEAR-INPUT	function	unimplemented	none
+CLEAR-OUTPUT	function	unimplemented	none
+CLOSE	function	unimplemented	none
+CLRHASH	function	unimplemented	none
+CODE-CHAR	function	partial	dev
+COERCE	function	unimplemented	none
+COMPILATION-SPEED	symbol,syntax-marker	partial	dev
+COMPILE	function	unimplemented	none
+COMPILE-FILE	function	unimplemented	none
+COMPILE-FILE-PATHNAME	function	unimplemented	none
+COMPILED-FUNCTION	type	unimplemented	none
+COMPILED-FUNCTION-P	function	unimplemented	none
+COMPILER-MACRO	symbol	unimplemented	none
+COMPILER-MACRO-FUNCTION	function	unimplemented	none
+COMPLEMENT	function	partial	dev
+COMPLEX	function,type	unimplemented	none
+COMPLEXP	function	unimplemented	none
+COMPUTE-APPLICABLE-METHODS	function	unimplemented	none
+COMPUTE-RESTARTS	function	unimplemented	none
+CONCATENATE	function	unimplemented	none
+CONCATENATED-STREAM	type	unimplemented	none
+CONCATENATED-STREAM-STREAMS	function	unimplemented	none
+COND	macro	partial	dev
+CONDITION	type	unimplemented	none
+CONJUGATE	function	unimplemented	none
+CONS	function,type	partial	dev
+CONSP	function	partial	dev
+CONSTANTLY	function	partial	dev
+CONSTANTP	function	unimplemented	none
+CONTINUE	function	unimplemented	none
+CONTROL-ERROR	type	unimplemented	none
+COPY-ALIST	function	unimplemented	none
+COPY-LIST	function	partial	dev
+COPY-PPRINT-DISPATCH	function	unimplemented	none
+COPY-READTABLE	function	unimplemented	none
+COPY-SEQ	function	unimplemented	none
+COPY-STRUCTURE	function	unimplemented	none
+COPY-SYMBOL	function	unimplemented	none
+COPY-TREE	function	unimplemented	none
+COS	function	partial	dev
+COSH	function	unimplemented	none
+COUNT	function	unimplemented	none
+COUNT-IF	function	unimplemented	none
+COUNT-IF-NOT	function	unimplemented	none
+CTYPECASE	macro	unimplemented	none
+DEBUG	symbol,syntax-marker	partial	dev
+DECF	macro	unimplemented	none
+DECLAIM	macro	partial	dev
+DECLARATION	symbol	unimplemented	none
+DECLARE	symbol,syntax-marker	partial	dev
+DECODE-FLOAT	function	unimplemented	none
+DECODE-UNIVERSAL-TIME	function	unimplemented	none
+DEFCLASS	macro	unimplemented	none
+DEFCONSTANT	macro	partial	dev
+DEFGENERIC	macro	unimplemented	none
+DEFINE-COMPILER-MACRO	macro	unimplemented	none
+DEFINE-CONDITION	macro	unimplemented	none
+DEFINE-METHOD-COMBINATION	macro	unimplemented	none
+DEFINE-MODIFY-MACRO	macro	unimplemented	none
+DEFINE-SETF-EXPANDER	macro	unimplemented	none
+DEFINE-SYMBOL-MACRO	macro	unimplemented	none
+DEFMACRO	macro	partial	dev
+DEFMETHOD	macro	unimplemented	none
+DEFPACKAGE	macro	partial	dev
+DEFPARAMETER	macro	partial	dev
+DEFSETF	macro	unimplemented	none
+DEFSTRUCT	macro	unimplemented	none
+DEFTYPE	macro	unimplemented	none
+DEFUN	macro	partial	dev
+DEFVAR	macro	partial	dev
+DELETE	function	unimplemented	none
+DELETE-DUPLICATES	function	unimplemented	none
+DELETE-FILE	function	unimplemented	none
+DELETE-IF	function	unimplemented	none
+DELETE-IF-NOT	function	unimplemented	none
+DELETE-PACKAGE	function	unimplemented	none
+DENOMINATOR	function	unimplemented	none
+DEPOSIT-FIELD	function	unimplemented	none
+DESCRIBE	function	unimplemented	none
+DESCRIBE-OBJECT	function	unimplemented	none
+DESTRUCTURING-BIND	macro	partial	dev
+DIGIT-CHAR	function	unimplemented	none
+DIGIT-CHAR-P	function	unimplemented	none
+DIRECTORY	function	unimplemented	none
+DIRECTORY-NAMESTRING	function	unimplemented	none
+DISASSEMBLE	function	unimplemented	none
+DIVISION-BY-ZERO	type	unimplemented	none
+DO	macro	unimplemented	none
+DO*	macro	unimplemented	none
+DO-ALL-SYMBOLS	macro	unimplemented	none
+DO-EXTERNAL-SYMBOLS	macro	unimplemented	none
+DO-SYMBOLS	macro	unimplemented	none
+DOCUMENTATION	function	unimplemented	none
+DOLIST	macro	unimplemented	none
+DOTIMES	macro	unimplemented	none
+DOUBLE-FLOAT	type	unimplemented	none
+DOUBLE-FLOAT-EPSILON	constant	unimplemented	none
+DOUBLE-FLOAT-NEGATIVE-EPSILON	constant	unimplemented	none
+DPB	function	unimplemented	none
+DRIBBLE	function	unimplemented	none
+DYNAMIC-EXTENT	symbol,syntax-marker	partial	dev
+ECASE	macro	unimplemented	none
+ECHO-STREAM	type	unimplemented	none
+ECHO-STREAM-INPUT-STREAM	function	unimplemented	none
+ECHO-STREAM-OUTPUT-STREAM	function	unimplemented	none
+ED	function	unimplemented	none
+EIGHTH	function	unimplemented	none
+ELT	function	unimplemented	none
+ENCODE-UNIVERSAL-TIME	function	unimplemented	none
+END-OF-FILE	type	unimplemented	none
+ENDP	function	unimplemented	none
+ENOUGH-NAMESTRING	function	unimplemented	none
+ENSURE-DIRECTORIES-EXIST	function	unimplemented	none
+ENSURE-GENERIC-FUNCTION	function	unimplemented	none
+EQ	function	partial	dev
+EQL	function	partial	dev
+EQUAL	function	partial	dev
+EQUALP	function	unimplemented	none
+ERROR	function,type	unimplemented	none
+ETYPECASE	macro	unimplemented	none
+EVAL	function	unimplemented	none
+EVAL-WHEN	special-operator	partial	dev
+EVENP	function	partial	dev
+EVERY	function	unimplemented	none
+EXP	function	partial	dev
+EXPORT	function	partial	dev
+EXPT	function	partial	dev
+EXTENDED-CHAR	type	unimplemented	none
+FBOUNDP	function	partial	dev
+FCEILING	function	unimplemented	none
+FDEFINITION	function	unimplemented	none
+FFLOOR	function	unimplemented	none
+FIFTH	function	unimplemented	none
+FILE-AUTHOR	function	unimplemented	none
+FILE-ERROR	type	unimplemented	none
+FILE-ERROR-PATHNAME	function	unimplemented	none
+FILE-LENGTH	function	unimplemented	none
+FILE-NAMESTRING	function	unimplemented	none
+FILE-POSITION	function	unimplemented	none
+FILE-STREAM	type	unimplemented	none
+FILE-STRING-LENGTH	function	unimplemented	none
+FILE-WRITE-DATE	function	unimplemented	none
+FILL	function	unimplemented	none
+FILL-POINTER	function	unimplemented	none
+FIND	function	unimplemented	none
+FIND-ALL-SYMBOLS	function	unimplemented	none
+FIND-CLASS	function	unimplemented	none
+FIND-IF	function	unimplemented	none
+FIND-IF-NOT	function	unimplemented	none
+FIND-METHOD	function	unimplemented	none
+FIND-PACKAGE	function	partial	dev
+FIND-RESTART	function	unimplemented	none
+FIND-SYMBOL	function	partial	dev
+FINISH-OUTPUT	function	unimplemented	none
+FIRST	function	partial	dev
+FIXNUM	type	unimplemented	none
+FLET	special-operator	partial	dev
+FLOAT	function,type	unimplemented	none
+FLOAT-DIGITS	function	unimplemented	none
+FLOAT-PRECISION	function	unimplemented	none
+FLOAT-RADIX	function	unimplemented	none
+FLOAT-SIGN	function	unimplemented	none
+FLOATING-POINT-INEXACT	type	unimplemented	none
+FLOATING-POINT-INVALID-OPERATION	type	unimplemented	none
+FLOATING-POINT-OVERFLOW	type	unimplemented	none
+FLOATING-POINT-UNDERFLOW	type	unimplemented	none
+FLOATP	function	partial	dev
+FLOOR	function	partial	dev
+FMAKUNBOUND	function	unimplemented	none
+FORCE-OUTPUT	function	unimplemented	none
+FORMAT	function	unimplemented	none
+FORMATTER	macro	unimplemented	none
+FOURTH	function	unimplemented	none
+FRESH-LINE	function	unimplemented	none
+FROUND	function	unimplemented	none
+FTRUNCATE	function	unimplemented	none
+FTYPE	symbol,syntax-marker	partial	dev
+FUNCALL	function	partial	dev
+FUNCTION	special-operator,type	partial	dev
+FUNCTION-KEYWORDS	function	unimplemented	none
+FUNCTION-LAMBDA-EXPRESSION	function	unimplemented	none
+FUNCTIONP	function	partial	dev
+GCD	function	unimplemented	none
+GENERIC-FUNCTION	type	unimplemented	none
+GENSYM	function	partial	dev
+GENTEMP	function	unimplemented	none
+GET	function	unimplemented	none
+GET-DECODED-TIME	function	unimplemented	none
+GET-DISPATCH-MACRO-CHARACTER	function	unimplemented	none
+GET-INTERNAL-REAL-TIME	function	unimplemented	none
+GET-INTERNAL-RUN-TIME	function	unimplemented	none
+GET-MACRO-CHARACTER	function	unimplemented	none
+GET-OUTPUT-STREAM-STRING	function	unimplemented	none
+GET-PROPERTIES	function	unimplemented	none
+GET-SETF-EXPANSION	function	unimplemented	none
+GET-UNIVERSAL-TIME	function	unimplemented	none
+GETF	function	unimplemented	none
+GETHASH	function	unimplemented	none
+GO	special-operator	partial	dev
+GRAPHIC-CHAR-P	function	unimplemented	none
+HANDLER-BIND	macro	unimplemented	none
+HANDLER-CASE	macro	unimplemented	none
+HASH-TABLE	type	unimplemented	none
+HASH-TABLE-COUNT	function	unimplemented	none
+HASH-TABLE-P	function	unimplemented	none
+HASH-TABLE-REHASH-SIZE	function	unimplemented	none
+HASH-TABLE-REHASH-THRESHOLD	function	unimplemented	none
+HASH-TABLE-SIZE	function	unimplemented	none
+HASH-TABLE-TEST	function	unimplemented	none
+HOST-NAMESTRING	function	unimplemented	none
+IDENTITY	function	partial	dev
+IF	special-operator	partial	dev
+IGNORABLE	symbol,syntax-marker	partial	dev
+IGNORE	symbol,syntax-marker	partial	dev
+IGNORE-ERRORS	macro	unimplemented	none
+IMAGPART	function	unimplemented	none
+IMPORT	function	partial	dev
+IN-PACKAGE	macro	partial	dev
+INCF	macro	unimplemented	none
+INITIALIZE-INSTANCE	function	unimplemented	none
+INLINE	symbol,syntax-marker	partial	dev
+INPUT-STREAM-P	function	unimplemented	none
+INSPECT	function	unimplemented	none
+INTEGER	type	unimplemented	none
+INTEGER-DECODE-FLOAT	function	unimplemented	none
+INTEGER-LENGTH	function	unimplemented	none
+INTEGERP	function	partial	dev
+INTERACTIVE-STREAM-P	function	unimplemented	none
+INTERN	function	partial	dev
+INTERNAL-TIME-UNITS-PER-SECOND	constant	unimplemented	none
+INTERSECTION	function	unimplemented	none
+INVALID-METHOD-ERROR	function	unimplemented	none
+INVOKE-DEBUGGER	function	unimplemented	none
+INVOKE-RESTART	function	unimplemented	none
+INVOKE-RESTART-INTERACTIVELY	function	unimplemented	none
+ISQRT	function	unimplemented	none
+KEYWORD	type	unimplemented	none
+KEYWORDP	function	partial	dev
+LABELS	special-operator	partial	dev
+LAMBDA	macro,syntax-marker	partial	dev
+LAMBDA-LIST-KEYWORDS	constant	unimplemented	none
+LAMBDA-PARAMETERS-LIMIT	constant	unimplemented	none
+LAST	function	unimplemented	none
+LCM	function	unimplemented	none
+LDB	function	unimplemented	none
+LDB-TEST	function	unimplemented	none
+LDIFF	function	unimplemented	none
+LEAST-NEGATIVE-DOUBLE-FLOAT	constant	unimplemented	none
+LEAST-NEGATIVE-LONG-FLOAT	constant	unimplemented	none
+LEAST-NEGATIVE-NORMALIZED-DOUBLE-FLOAT	constant	unimplemented	none
+LEAST-NEGATIVE-NORMALIZED-LONG-FLOAT	constant	unimplemented	none
+LEAST-NEGATIVE-NORMALIZED-SHORT-FLOAT	constant	unimplemented	none
+LEAST-NEGATIVE-NORMALIZED-SINGLE-FLOAT	constant	unimplemented	none
+LEAST-NEGATIVE-SHORT-FLOAT	constant	unimplemented	none
+LEAST-NEGATIVE-SINGLE-FLOAT	constant	unimplemented	none
+LEAST-POSITIVE-DOUBLE-FLOAT	constant	unimplemented	none
+LEAST-POSITIVE-LONG-FLOAT	constant	unimplemented	none
+LEAST-POSITIVE-NORMALIZED-DOUBLE-FLOAT	constant	unimplemented	none
+LEAST-POSITIVE-NORMALIZED-LONG-FLOAT	constant	unimplemented	none
+LEAST-POSITIVE-NORMALIZED-SHORT-FLOAT	constant	unimplemented	none
+LEAST-POSITIVE-NORMALIZED-SINGLE-FLOAT	constant	unimplemented	none
+LEAST-POSITIVE-SHORT-FLOAT	constant	unimplemented	none
+LEAST-POSITIVE-SINGLE-FLOAT	constant	unimplemented	none
+LENGTH	function	partial	dev
+LET	special-operator	partial	dev
+LET*	special-operator	partial	dev
+LISP-IMPLEMENTATION-TYPE	function	unimplemented	none
+LISP-IMPLEMENTATION-VERSION	function	unimplemented	none
+LIST	function,type	partial	dev
+LIST*	function	partial	dev
+LIST-ALL-PACKAGES	function	unimplemented	none
+LIST-LENGTH	function	unimplemented	none
+LISTEN	function	unimplemented	none
+LISTP	function	partial	dev
+LOAD	function	unimplemented	none
+LOAD-LOGICAL-PATHNAME-TRANSLATIONS	function	unimplemented	none
+LOAD-TIME-VALUE	special-operator	unimplemented	none
+LOCALLY	special-operator	partial	dev
+LOG	function	partial	dev
+LOGAND	function	partial	dev
+LOGANDC1	function	unimplemented	none
+LOGANDC2	function	unimplemented	none
+LOGBITP	function	unimplemented	none
+LOGCOUNT	function	unimplemented	none
+LOGEQV	function	unimplemented	none
+LOGICAL-PATHNAME	function,type	unimplemented	none
+LOGICAL-PATHNAME-TRANSLATIONS	function	unimplemented	none
+LOGIOR	function	partial	dev
+LOGNAND	function	unimplemented	none
+LOGNOR	function	unimplemented	none
+LOGNOT	function	partial	dev
+LOGORC1	function	unimplemented	none
+LOGORC2	function	unimplemented	none
+LOGTEST	function	unimplemented	none
+LOGXOR	function	partial	dev
+LONG-FLOAT	type	unimplemented	none
+LONG-FLOAT-EPSILON	constant	unimplemented	none
+LONG-FLOAT-NEGATIVE-EPSILON	constant	unimplemented	none
+LONG-SITE-NAME	function	unimplemented	none
+LOOP	macro	unimplemented	none
+LOOP-FINISH	macro	unimplemented	none
+LOWER-CASE-P	function	unimplemented	none
+MACHINE-INSTANCE	function	unimplemented	none
+MACHINE-TYPE	function	unimplemented	none
+MACHINE-VERSION	function	unimplemented	none
+MACRO-FUNCTION	function	partial	dev
+MACROEXPAND	function	partial	dev
+MACROEXPAND-1	function	partial	dev
+MACROLET	special-operator	partial	dev
+MAKE-ARRAY	function	unimplemented	none
+MAKE-BROADCAST-STREAM	function	unimplemented	none
+MAKE-CONCATENATED-STREAM	function	unimplemented	none
+MAKE-CONDITION	function	unimplemented	none
+MAKE-DISPATCH-MACRO-CHARACTER	function	unimplemented	none
+MAKE-ECHO-STREAM	function	unimplemented	none
+MAKE-HASH-TABLE	function	unimplemented	none
+MAKE-INSTANCE	function	unimplemented	none
+MAKE-INSTANCES-OBSOLETE	function	unimplemented	none
+MAKE-LIST	function	unimplemented	none
+MAKE-LOAD-FORM	function	unimplemented	none
+MAKE-LOAD-FORM-SAVING-SLOTS	function	unimplemented	none
+MAKE-METHOD	symbol	unimplemented	none
+MAKE-PACKAGE	function	partial	dev
+MAKE-PATHNAME	function	unimplemented	none
+MAKE-RANDOM-STATE	function	unimplemented	none
+MAKE-SEQUENCE	function	unimplemented	none
+MAKE-STRING	function	unimplemented	none
+MAKE-STRING-INPUT-STREAM	function	unimplemented	none
+MAKE-STRING-OUTPUT-STREAM	function	unimplemented	none
+MAKE-SYMBOL	function	partial	dev
+MAKE-SYNONYM-STREAM	function	unimplemented	none
+MAKE-TWO-WAY-STREAM	function	unimplemented	none
+MAKUNBOUND	function	unimplemented	none
+MAP	function	unimplemented	none
+MAP-INTO	function	unimplemented	none
+MAPC	function	unimplemented	none
+MAPCAN	function	unimplemented	none
+MAPCAR	function	partial	dev
+MAPCON	function	unimplemented	none
+MAPHASH	function	unimplemented	none
+MAPL	function	unimplemented	none
+MAPLIST	function	unimplemented	none
+MASK-FIELD	function	unimplemented	none
+MAX	function	unimplemented	none
+MEMBER	function	partial	dev
+MEMBER-IF	function	unimplemented	none
+MEMBER-IF-NOT	function	unimplemented	none
+MERGE	function	unimplemented	none
+MERGE-PATHNAMES	function	unimplemented	none
+METHOD	type	unimplemented	none
+METHOD-COMBINATION	type	unimplemented	none
+METHOD-COMBINATION-ERROR	function	unimplemented	none
+METHOD-QUALIFIERS	function	unimplemented	none
+MIN	function	unimplemented	none
+MINUSP	function	unimplemented	none
+MISMATCH	function	unimplemented	none
+MOD	function	partial	dev
+MOST-NEGATIVE-DOUBLE-FLOAT	constant	unimplemented	none
+MOST-NEGATIVE-FIXNUM	constant	unimplemented	none
+MOST-NEGATIVE-LONG-FLOAT	constant	unimplemented	none
+MOST-NEGATIVE-SHORT-FLOAT	constant	unimplemented	none
+MOST-NEGATIVE-SINGLE-FLOAT	constant	unimplemented	none
+MOST-POSITIVE-DOUBLE-FLOAT	constant	unimplemented	none
+MOST-POSITIVE-FIXNUM	constant	unimplemented	none
+MOST-POSITIVE-LONG-FLOAT	constant	unimplemented	none
+MOST-POSITIVE-SHORT-FLOAT	constant	unimplemented	none
+MOST-POSITIVE-SINGLE-FLOAT	constant	unimplemented	none
+MUFFLE-WARNING	function	unimplemented	none
+MULTIPLE-VALUE-BIND	macro	partial	dev
+MULTIPLE-VALUE-CALL	special-operator	partial	dev
+MULTIPLE-VALUE-LIST	macro	partial	dev
+MULTIPLE-VALUE-PROG1	special-operator	partial	dev
+MULTIPLE-VALUE-SETQ	macro	partial	dev
+MULTIPLE-VALUES-LIMIT	constant	unimplemented	none
+NAME-CHAR	function	unimplemented	none
+NAMESTRING	function	unimplemented	none
+NBUTLAST	function	unimplemented	none
+NCONC	function	unimplemented	none
+NEXT-METHOD-P	symbol	unimplemented	none
+NIL	constant,type	partial	dev
+NINTERSECTION	function	unimplemented	none
+NINTH	function	unimplemented	none
+NO-APPLICABLE-METHOD	function	unimplemented	none
+NO-NEXT-METHOD	function	unimplemented	none
+NOT	function	partial	dev
+NOTANY	function	unimplemented	none
+NOTEVERY	function	unimplemented	none
+NOTINLINE	symbol,syntax-marker	partial	dev
+NRECONC	function	unimplemented	none
+NREVERSE	function	partial	dev
+NSET-DIFFERENCE	function	unimplemented	none
+NSET-EXCLUSIVE-OR	function	unimplemented	none
+NSTRING-CAPITALIZE	function	unimplemented	none
+NSTRING-DOWNCASE	function	unimplemented	none
+NSTRING-UPCASE	function	unimplemented	none
+NSUBLIS	function	unimplemented	none
+NSUBST	function	unimplemented	none
+NSUBST-IF	function	unimplemented	none
+NSUBST-IF-NOT	function	unimplemented	none
+NSUBSTITUTE	function	unimplemented	none
+NSUBSTITUTE-IF	function	unimplemented	none
+NSUBSTITUTE-IF-NOT	function	unimplemented	none
+NTH	function	partial	dev
+NTH-VALUE	macro	partial	dev
+NTHCDR	function	partial	dev
+NULL	function,type	partial	dev
+NUMBER	type	unimplemented	none
+NUMBERP	function	partial	dev
+NUMERATOR	function	unimplemented	none
+NUNION	function	unimplemented	none
+ODDP	function	partial	dev
+OPEN	function	unimplemented	none
+OPEN-STREAM-P	function	unimplemented	none
+OPTIMIZE	symbol,syntax-marker	partial	dev
+OR	macro	partial	dev
+OTHERWISE	symbol	unimplemented	none
+OUTPUT-STREAM-P	function	unimplemented	none
+PACKAGE	type	unimplemented	none
+PACKAGE-ERROR	type	unimplemented	none
+PACKAGE-ERROR-PACKAGE	function	unimplemented	none
+PACKAGE-NAME	function	partial	dev
+PACKAGE-NICKNAMES	function	unimplemented	none
+PACKAGE-SHADOWING-SYMBOLS	function	unimplemented	none
+PACKAGE-USE-LIST	function	unimplemented	none
+PACKAGE-USED-BY-LIST	function	unimplemented	none
+PACKAGEP	function	partial	dev
+PAIRLIS	function	unimplemented	none
+PARSE-ERROR	type	unimplemented	none
+PARSE-INTEGER	function	unimplemented	none
+PARSE-NAMESTRING	function	unimplemented	none
+PATHNAME	function,type	unimplemented	none
+PATHNAME-DEVICE	function	unimplemented	none
+PATHNAME-DIRECTORY	function	unimplemented	none
+PATHNAME-HOST	function	unimplemented	none
+PATHNAME-MATCH-P	function	unimplemented	none
+PATHNAME-NAME	function	unimplemented	none
+PATHNAME-TYPE	function	unimplemented	none
+PATHNAME-VERSION	function	unimplemented	none
+PATHNAMEP	function	unimplemented	none
+PEEK-CHAR	function	unimplemented	none
+PHASE	function	unimplemented	none
+PI	constant	unimplemented	none
+PLUSP	function	unimplemented	none
+POP	macro	unimplemented	none
+POSITION	function	unimplemented	none
+POSITION-IF	function	unimplemented	none
+POSITION-IF-NOT	function	unimplemented	none
+PPRINT	function	unimplemented	none
+PPRINT-DISPATCH	function	unimplemented	none
+PPRINT-EXIT-IF-LIST-EXHAUSTED	macro	unimplemented	none
+PPRINT-FILL	function	unimplemented	none
+PPRINT-INDENT	function	unimplemented	none
+PPRINT-LINEAR	function	unimplemented	none
+PPRINT-LOGICAL-BLOCK	macro	unimplemented	none
+PPRINT-NEWLINE	function	unimplemented	none
+PPRINT-POP	macro	unimplemented	none
+PPRINT-TAB	function	unimplemented	none
+PPRINT-TABULAR	function	unimplemented	none
+PRIN1	function	unimplemented	none
+PRIN1-TO-STRING	function	unimplemented	none
+PRINC	function	unimplemented	none
+PRINC-TO-STRING	function	unimplemented	none
+PRINT	function	unimplemented	none
+PRINT-NOT-READABLE	type	unimplemented	none
+PRINT-NOT-READABLE-OBJECT	function	unimplemented	none
+PRINT-OBJECT	function	unimplemented	none
+PRINT-UNREADABLE-OBJECT	macro	unimplemented	none
+PROBE-FILE	function	unimplemented	none
+PROCLAIM	function	partial	dev
+PROG	macro	unimplemented	none
+PROG*	macro	unimplemented	none
+PROG1	macro	partial	dev
+PROG2	macro	partial	dev
+PROGN	special-operator	partial	dev
+PROGRAM-ERROR	type	unimplemented	none
+PROGV	special-operator	unimplemented	none
+PROVIDE	function	unimplemented	none
+PSETF	macro	unimplemented	none
+PSETQ	macro	unimplemented	none
+PUSH	macro	unimplemented	none
+PUSHNEW	macro	unimplemented	none
+QUOTE	special-operator	partial	dev
+RANDOM	function	unimplemented	none
+RANDOM-STATE	type	unimplemented	none
+RANDOM-STATE-P	function	unimplemented	none
+RASSOC	function	unimplemented	none
+RASSOC-IF	function	unimplemented	none
+RASSOC-IF-NOT	function	unimplemented	none
+RATIO	type	unimplemented	none
+RATIONAL	function,type	unimplemented	none
+RATIONALIZE	function	unimplemented	none
+RATIONALP	function	unimplemented	none
+READ	function	unimplemented	none
+READ-BYTE	function	unimplemented	none
+READ-CHAR	function	unimplemented	none
+READ-CHAR-NO-HANG	function	unimplemented	none
+READ-DELIMITED-LIST	function	unimplemented	none
+READ-FROM-STRING	function	unimplemented	none
+READ-LINE	function	unimplemented	none
+READ-PRESERVING-WHITESPACE	function	unimplemented	none
+READ-SEQUENCE	function	unimplemented	none
+READER-ERROR	type	unimplemented	none
+READTABLE	type	unimplemented	none
+READTABLE-CASE	function	unimplemented	none
+READTABLEP	function	unimplemented	none
+REAL	type	unimplemented	none
+REALP	function	unimplemented	none
+REALPART	function	unimplemented	none
+REDUCE	function	unimplemented	none
+REINITIALIZE-INSTANCE	function	unimplemented	none
+REM	function	partial	dev
+REMF	macro	unimplemented	none
+REMHASH	function	unimplemented	none
+REMOVE	function	unimplemented	none
+REMOVE-DUPLICATES	function	unimplemented	none
+REMOVE-IF	function	unimplemented	none
+REMOVE-IF-NOT	function	unimplemented	none
+REMOVE-METHOD	function	unimplemented	none
+REMPROP	function	unimplemented	none
+RENAME-FILE	function	unimplemented	none
+RENAME-PACKAGE	function	unimplemented	none
+REPLACE	function	unimplemented	none
+REQUIRE	function	unimplemented	none
+REST	function	partial	dev
+RESTART	type	unimplemented	none
+RESTART-BIND	macro	unimplemented	none
+RESTART-CASE	macro	unimplemented	none
+RESTART-NAME	function	unimplemented	none
+RETURN	macro	partial	dev
+RETURN-FROM	special-operator	partial	dev
+REVAPPEND	function	unimplemented	none
+REVERSE	function	partial	dev
+ROOM	function	unimplemented	none
+ROTATEF	macro	unimplemented	none
+ROUND	function	partial	dev
+ROW-MAJOR-AREF	function	unimplemented	none
+RPLACA	function	partial	dev
+RPLACD	function	partial	dev
+SAFETY	symbol,syntax-marker	partial	dev
+SATISFIES	symbol	unimplemented	none
+SBIT	function	unimplemented	none
+SCALE-FLOAT	function	unimplemented	none
+SCHAR	function	partial	dev
+SEARCH	function	unimplemented	none
+SECOND	function	partial	dev
+SEQUENCE	type	unimplemented	none
+SERIOUS-CONDITION	type	unimplemented	none
+SET	function	partial	dev
+SET-DIFFERENCE	function	unimplemented	none
+SET-DISPATCH-MACRO-CHARACTER	function	unimplemented	none
+SET-EXCLUSIVE-OR	function	unimplemented	none
+SET-MACRO-CHARACTER	function	unimplemented	none
+SET-PPRINT-DISPATCH	function	unimplemented	none
+SET-SYNTAX-FROM-CHAR	function	unimplemented	none
+SETF	macro	unimplemented	none
+SETQ	special-operator	partial	dev
+SEVENTH	function	unimplemented	none
+SHADOW	function	partial	dev
+SHADOWING-IMPORT	function	unimplemented	none
+SHARED-INITIALIZE	function	unimplemented	none
+SHIFTF	macro	unimplemented	none
+SHORT-FLOAT	type	unimplemented	none
+SHORT-FLOAT-EPSILON	constant	unimplemented	none
+SHORT-FLOAT-NEGATIVE-EPSILON	constant	unimplemented	none
+SHORT-SITE-NAME	function	unimplemented	none
+SIGNAL	function	unimplemented	none
+SIGNED-BYTE	type	unimplemented	none
+SIGNUM	function	unimplemented	none
+SIMPLE-ARRAY	type	unimplemented	none
+SIMPLE-BASE-STRING	type	unimplemented	none
+SIMPLE-BIT-VECTOR	type	unimplemented	none
+SIMPLE-BIT-VECTOR-P	function	unimplemented	none
+SIMPLE-CONDITION	type	unimplemented	none
+SIMPLE-CONDITION-FORMAT-ARGUMENTS	function	unimplemented	none
+SIMPLE-CONDITION-FORMAT-CONTROL	function	unimplemented	none
+SIMPLE-ERROR	type	unimplemented	none
+SIMPLE-STRING	type	unimplemented	none
+SIMPLE-STRING-P	function	unimplemented	none
+SIMPLE-TYPE-ERROR	type	unimplemented	none
+SIMPLE-VECTOR	type	unimplemented	none
+SIMPLE-VECTOR-P	function	partial	dev
+SIMPLE-WARNING	type	unimplemented	none
+SIN	function	partial	dev
+SINGLE-FLOAT	type	unimplemented	none
+SINGLE-FLOAT-EPSILON	constant	unimplemented	none
+SINGLE-FLOAT-NEGATIVE-EPSILON	constant	unimplemented	none
+SINH	function	unimplemented	none
+SIXTH	function	unimplemented	none
+SLEEP	function	unimplemented	none
+SLOT-BOUNDP	function	unimplemented	none
+SLOT-EXISTS-P	function	unimplemented	none
+SLOT-MAKUNBOUND	function	unimplemented	none
+SLOT-MISSING	function	unimplemented	none
+SLOT-UNBOUND	function	unimplemented	none
+SLOT-VALUE	function	unimplemented	none
+SOFTWARE-TYPE	function	unimplemented	none
+SOFTWARE-VERSION	function	unimplemented	none
+SOME	function	unimplemented	none
+SORT	function	unimplemented	none
+SPACE	symbol,syntax-marker	partial	dev
+SPECIAL	symbol,syntax-marker	partial	dev
+SPECIAL-OPERATOR-P	function	unimplemented	none
+SPEED	symbol,syntax-marker	partial	dev
+SQRT	function	partial	dev
+STABLE-SORT	function	unimplemented	none
+STANDARD	symbol	unimplemented	none
+STANDARD-CHAR	type	unimplemented	none
+STANDARD-CHAR-P	function	unimplemented	none
+STANDARD-CLASS	type	unimplemented	none
+STANDARD-GENERIC-FUNCTION	type	unimplemented	none
+STANDARD-METHOD	type	unimplemented	none
+STANDARD-OBJECT	type	unimplemented	none
+STEP	macro	unimplemented	none
+STORAGE-CONDITION	type	unimplemented	none
+STORE-VALUE	function	unimplemented	none
+STREAM	type	unimplemented	none
+STREAM-ELEMENT-TYPE	function	unimplemented	none
+STREAM-ERROR	type	unimplemented	none
+STREAM-ERROR-STREAM	function	unimplemented	none
+STREAM-EXTERNAL-FORMAT	function	unimplemented	none
+STREAMP	function	unimplemented	none
+STRING	function,type	partial	dev
+STRING-CAPITALIZE	function	unimplemented	none
+STRING-DOWNCASE	function	unimplemented	none
+STRING-EQUAL	function	unimplemented	none
+STRING-GREATERP	function	unimplemented	none
+STRING-LEFT-TRIM	function	unimplemented	none
+STRING-LESSP	function	unimplemented	none
+STRING-NOT-EQUAL	function	unimplemented	none
+STRING-NOT-GREATERP	function	unimplemented	none
+STRING-NOT-LESSP	function	unimplemented	none
+STRING-RIGHT-TRIM	function	unimplemented	none
+STRING-STREAM	type	unimplemented	none
+STRING-TRIM	function	unimplemented	none
+STRING-UPCASE	function	unimplemented	none
+STRING/=	function	unimplemented	none
+STRING<	function	unimplemented	none
+STRING<=	function	unimplemented	none
+STRING=	function	unimplemented	none
+STRING>	function	unimplemented	none
+STRING>=	function	unimplemented	none
+STRINGP	function	partial	dev
+STRUCTURE	symbol	unimplemented	none
+STRUCTURE-CLASS	type	unimplemented	none
+STRUCTURE-OBJECT	type	unimplemented	none
+STYLE-WARNING	type	unimplemented	none
+SUBLIS	function	unimplemented	none
+SUBSEQ	function	unimplemented	none
+SUBSETP	function	unimplemented	none
+SUBST	function	unimplemented	none
+SUBST-IF	function	unimplemented	none
+SUBST-IF-NOT	function	unimplemented	none
+SUBSTITUTE	function	unimplemented	none
+SUBSTITUTE-IF	function	unimplemented	none
+SUBSTITUTE-IF-NOT	function	unimplemented	none
+SUBTYPEP	function	unimplemented	none
+SVREF	function	partial	dev
+SXHASH	function	unimplemented	none
+SYMBOL	type	unimplemented	none
+SYMBOL-FUNCTION	function	partial	dev
+SYMBOL-MACROLET	special-operator	partial	dev
+SYMBOL-NAME	function	partial	dev
+SYMBOL-PACKAGE	function	partial	dev
+SYMBOL-PLIST	function	partial	dev
+SYMBOL-VALUE	function	partial	dev
+SYMBOLP	function	partial	dev
+SYNONYM-STREAM	type	unimplemented	none
+SYNONYM-STREAM-SYMBOL	function	unimplemented	none
+T	constant,type	partial	dev
+TAGBODY	special-operator	partial	dev
+TAILP	function	unimplemented	none
+TAN	function	partial	dev
+TANH	function	unimplemented	none
+TENTH	function	unimplemented	none
+TERPRI	function	unimplemented	none
+THE	special-operator	partial	dev
+THIRD	function	partial	dev
+THROW	special-operator	partial	dev
+TIME	macro	unimplemented	none
+TRACE	macro	unimplemented	none
+TRANSLATE-LOGICAL-PATHNAME	function	unimplemented	none
+TRANSLATE-PATHNAME	function	unimplemented	none
+TREE-EQUAL	function	unimplemented	none
+TRUENAME	function	unimplemented	none
+TRUNCATE	function	partial	dev
+TWO-WAY-STREAM	type	unimplemented	none
+TWO-WAY-STREAM-INPUT-STREAM	function	unimplemented	none
+TWO-WAY-STREAM-OUTPUT-STREAM	function	unimplemented	none
+TYPE	symbol,syntax-marker	partial	dev
+TYPE-ERROR	type	unimplemented	none
+TYPE-ERROR-DATUM	function	unimplemented	none
+TYPE-ERROR-EXPECTED-TYPE	function	unimplemented	none
+TYPE-OF	function	unimplemented	none
+TYPECASE	macro	unimplemented	none
+TYPEP	function	unimplemented	none
+UNBOUND-SLOT	type	unimplemented	none
+UNBOUND-SLOT-INSTANCE	function	unimplemented	none
+UNBOUND-VARIABLE	type	unimplemented	none
+UNDEFINED-FUNCTION	type	unimplemented	none
+UNEXPORT	function	partial	dev
+UNINTERN	function	unimplemented	none
+UNION	function	unimplemented	none
+UNLESS	macro	partial	dev
+UNREAD-CHAR	function	unimplemented	none
+UNSIGNED-BYTE	type	unimplemented	none
+UNTRACE	macro	unimplemented	none
+UNUSE-PACKAGE	function	partial	dev
+UNWIND-PROTECT	special-operator	partial	dev
+UPDATE-INSTANCE-FOR-DIFFERENT-CLASS	function	unimplemented	none
+UPDATE-INSTANCE-FOR-REDEFINED-CLASS	function	unimplemented	none
+UPGRADED-ARRAY-ELEMENT-TYPE	function	unimplemented	none
+UPGRADED-COMPLEX-PART-TYPE	function	unimplemented	none
+UPPER-CASE-P	function	unimplemented	none
+USE-PACKAGE	function	partial	dev
+USE-VALUE	function	unimplemented	none
+USER-HOMEDIR-PATHNAME	function	unimplemented	none
+VALUES	function	partial	dev
+VALUES-LIST	function	partial	dev
+VARIABLE	symbol	unimplemented	none
+VECTOR	function,type	partial	dev
+VECTOR-POP	function	unimplemented	none
+VECTOR-PUSH	function	unimplemented	none
+VECTOR-PUSH-EXTEND	function	unimplemented	none
+VECTORP	function	partial	dev
+WARN	function	unimplemented	none
+WARNING	type	unimplemented	none
+WHEN	macro	partial	dev
+WILD-PATHNAME-P	function	unimplemented	none
+WITH-ACCESSORS	macro	unimplemented	none
+WITH-COMPILATION-UNIT	macro	unimplemented	none
+WITH-CONDITION-RESTARTS	macro	unimplemented	none
+WITH-HASH-TABLE-ITERATOR	macro	unimplemented	none
+WITH-INPUT-FROM-STRING	macro	unimplemented	none
+WITH-OPEN-FILE	macro	unimplemented	none
+WITH-OPEN-STREAM	macro	unimplemented	none
+WITH-OUTPUT-TO-STRING	macro	unimplemented	none
+WITH-PACKAGE-ITERATOR	macro	unimplemented	none
+WITH-SIMPLE-RESTART	macro	unimplemented	none
+WITH-SLOTS	macro	unimplemented	none
+WITH-STANDARD-IO-SYNTAX	macro	unimplemented	none
+WRITE	function	unimplemented	none
+WRITE-BYTE	function	unimplemented	none
+WRITE-CHAR	function	unimplemented	none
+WRITE-LINE	function	unimplemented	none
+WRITE-SEQUENCE	function	unimplemented	none
+WRITE-STRING	function	unimplemented	none
+WRITE-TO-STRING	function	unimplemented	none
+Y-OR-N-P	function	unimplemented	none
+YES-OR-NO-P	function	unimplemented	none
+ZEROP	function	unimplemented	none

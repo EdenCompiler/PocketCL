@@ -5,6 +5,8 @@ unsigned test_assertions;
 void test_memory(void);
 void test_package(void);
 void test_reader(void);
+void test_eval(void);
+void test_prim(void);
 
 static void foundation_test(void)
 {
@@ -16,7 +18,7 @@ int main(void)
 {
     const TestCase cases[] = {
         TEST_CASE(foundation_test), TEST_CASE(test_memory), TEST_CASE(test_package),
-        TEST_CASE(test_reader)
+        TEST_CASE(test_reader), TEST_CASE(test_eval), TEST_CASE(test_prim)
     };
     const size_t count = sizeof(cases) / sizeof(cases[0]);
     size_t i;

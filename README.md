@@ -1,6 +1,6 @@
 # PocketCL
 
-PocketCL is a small Common Lisp subset paired with a native UI runtime. **M0 foundations and M1 kernel core are implemented; M2 bootstrap execution is next.** Local `make ci` passes strict GCC/Clang builds, sanitizers, GC stress, and one million reader fuzz inputs; remote macOS CI remains pending. The design and milestone plan live in [roadmap.md](roadmap.md).
+PocketCL is a small Common Lisp subset paired with a native UI runtime. **M0–M2 are implemented; the M3 compiler and VM are next.** Cumulative local checks pass strict GCC/Clang builds, sanitizers, full GC stress, 260 portable assertions, 726 native assertions, and one million reader fuzz inputs. The same portable tests pass on SBCL; remote macOS CI remains pending. The design and milestone plan live in [roadmap.md](roadmap.md).
 
 ## Project split
 
@@ -8,13 +8,15 @@ The C99 kernel owns low-level mechanisms: values and memory, the bootstrap reade
 
 ## Build and checks
 
-Use `make` for the default build and `make ci` for the current M0 checks. The local CI workflow builds/runs the C harness with GCC, Clang, ASAN/UBSAN, and the GC-stress configuration, plus the conformance-table check. Remote Linux/macOS CI is planned; macOS has not yet been exercised remotely. The roadmap's later targets include `make stage0`, `make bootstrap`, `make golden`, optional `make diff-sbcl`, and `make bench`; consult the current Makefile because targets arrive with their milestones. SBCL is an optional test oracle, never a build dependency. The project adds no runtime dependencies beyond those listed in the roadmap.
+Use `make` for the default build and `make ci` for cumulative local checks. Run `make stage0`, then `build/default/pocketvm0 -e '(+ 20 22)'` or `build/default/pocketvm0 -r` for the bootstrap interpreter. `make diff-sbcl` runs the same portable tests against installed SBCL, which remains an optional oracle rather than a build dependency. The GC-stress target includes the full million-call tail loop and can take several minutes. Remote Linux/macOS workflows are prepared locally; remote execution remains pending. Later targets include `make bootstrap`, `make golden`, and `make bench`. The project adds no runtime dependencies beyond those listed in the roadmap.
 
 ## Where to start
 
 For the current kernel, begin with `kernel/include/pocket.h`, then `value.c` for representation, `heap.c` for allocation/GC, `package.c` for names, and `reader0.c`/`debugprint.c` for syntax. Each subsystem has tests under `tests/c/`. Allocators never collect: register live values with `p_roots` before calling the explicit `p_reserve` safe point.
 
 - [CONTRIBUTING.md](CONTRIBUTING.md) explains the language boundary, test expectations, and a useful newcomer path.
+- [docs/bootstrap.md](docs/bootstrap.md) follows execution, roots, and allocation for a new contributor.
+- [docs/milestones.md](docs/milestones.md) records completed gates and unavailable external checks.
 - [docs/spec.md](docs/spec.md) summarizes the language contract and its relationship to the Common Lisp HyperSpec.
 - [docs/platform.md](docs/platform.md) records the platform boundary and planned targets.
 - [docs/decisions.md](docs/decisions.md) records decisions not fully specified by the roadmap.

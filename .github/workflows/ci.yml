@@ -13,7 +13,20 @@ jobs:
         compiler: [gcc, clang]
     steps:
       - uses: actions/checkout@v4
+      - name: Select compiler
+        shell: bash
+        run: |
+          if [ "$RUNNER_OS" = macOS ] && [ '${{ matrix.compiler }}' = gcc ]; then
+            # Apple's /usr/bin/gcc is Clang. Use the actual GNU compiler here.
+            brew install gcc
+            set -- "$(brew --prefix gcc)"/bin/gcc-[0-9]*
+            echo "POCKET_CC=$1" >> "$GITHUB_ENV"
+          else
+            echo 'POCKET_CC=${{ matrix.compiler }}' >> "$GITHUB_ENV"
+          fi
       - name: Build and test strict C99
-        run: make test CC=${{ matrix.compiler }}
+        run: make test CC="$POCKET_CC"
       - name: Sanitizers and GC stress
         run: make asan stress
+      - name: Optional SBCL differential checks
+        run: make diff-sbcl

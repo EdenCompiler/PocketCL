@@ -1,4 +1,5 @@
 #include "pocket.h"
+#include "eval.h"
 #include "heap_internal.h"
 
 #include <limits.h>
@@ -206,6 +207,22 @@ static void mark_children(Pocket *p, size_t *mark_count, PObject *object) {
         if (object_size < sizeof(PPackageEntry)) break;
         PPackageEntry *entry = (PPackageEntry *)object;
         mark_value(p, mark_count, entry->symbol); mark_value(p, mark_count, entry->next);
+        break;
+    }
+    case P_CLOSURE: {
+        if (object_size < sizeof(PClosure)) break;
+        PClosure *closure = (PClosure *)object;
+        mark_value(p, mark_count, closure->name);
+        mark_value(p, mark_count, closure->parameters);
+        mark_value(p, mark_count, closure->body);
+        mark_value(p, mark_count, closure->environment);
+        mark_value(p, mark_count, closure->rest_parameter);
+        break;
+    }
+    case P_PRIMITIVE: {
+        if (object_size < sizeof(PPrimitive)) break;
+        PPrimitive *primitive = (PPrimitive *)object;
+        mark_value(p, mark_count, primitive->name);
         break;
     }
     case P_RECORD: {

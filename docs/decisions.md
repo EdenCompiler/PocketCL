@@ -60,11 +60,11 @@ Decisions made where the roadmap leaves an implementation choice open. Add new e
 
 ## 2026-10-20 — CI availability
 
-**Decision:** GitHub Actions is the intended remote CI service, with Linux and macOS jobs, but it is not configured yet.
+**Decision:** prepare GitHub Actions workflows locally with Linux and macOS jobs. Remote publishing and execution remain a separate step.
 
 **Reason:** preserve the planned platform coverage while accurately reflecting the current repository state.
 
-**Alternatives rejected:** describe remote CI as active before workflows and repository integration exist.
+**Alternatives rejected:** describe remote CI as active before repository integration and observed runs exist. The macOS GCC job explicitly selects Homebrew's GNU compiler because Apple's `gcc` command invokes Clang.
 
 ## 2026-10-20 — M14 PSP target and ASCII font
 

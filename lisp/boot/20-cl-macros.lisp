@@ -1,0 +1,35 @@
+;;; Small helpers needed by the portable bootstrap tests. The full generalized
+;;; place, sequence and condition APIs still belong to M4–M6.
+(defun pocket.sys::%strings-equal (left right index)
+  (if (= index (length left)) t
+      (and (eql (schar left index) (schar right index))
+           (pocket.sys::%strings-equal left right (1+ index)))))
+(defun equal (left right)
+  (cond ((eql left right) t)
+        ((and (consp left) (consp right))
+         (and (equal (car left) (car right)) (equal (cdr left) (cdr right))))
+        ((and (stringp left) (stringp right))
+         (and (= (length left) (length right))
+              (pocket.sys::%strings-equal left right 0)))
+        (t nil)))
+(defun evenp (number) (= (rem number 2) 0))
+(defun oddp (number) (not (evenp number)))
+
+(defmacro prog1 (first &body rest)
+  (let ((value (gensym "FIRST")))
+    (cons 'let (cons (list (list value first)) (append rest (list value))))))
+(defmacro prog2 (first second &body rest)
+  (list 'progn first (cons 'prog1 (cons second rest))))
+(defmacro return (&rest value)
+  (list 'return-from nil (if value (car value) nil)))
+(defmacro multiple-value-setq (variables expression)
+  (let ((values (gensym "VALUES")))
+    (list 'let (list (list values (list 'multiple-value-list expression)))
+          (cons 'setq
+                (pocket.sys::%mv-set-pairs variables values))
+          (list 'car values))))
+(defun pocket.sys::%mv-set-pairs (variables values)
+  (if (null variables) nil
+      (cons (car variables)
+            (cons (list 'car values)
+                  (pocket.sys::%mv-set-pairs (cdr variables) (list 'cdr values))))))

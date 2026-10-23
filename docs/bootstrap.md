@@ -1,8 +1,55 @@
 # Bootstrap implementation guide
 
-M0–M2 have passed their local acceptance gates. The commands below exercise
-the stage-0 interpreter and bootstrap library.
-The later compiler/VM bootstrap is specified in [the roadmap](../roadmap.md#62-bootstrap-sequence).
+M0–M3 have passed their local acceptance gates. The first implementation phase
+ends here for user review. The commands below exercise the stage-0 interpreter,
+Lisp compiler and native VM. The bootstrap chain follows
+[the roadmap](../roadmap.md#62-bootstrap-sequence).
+
+## Compiler and image hosts
+
+```sh
+make stage1       # stage 0 compiles the bootstrap and compiler into PFAS
+make bootstrap    # the native VM rebuilds that image; compare exact bytes
+build/default/pocketvm -e '(+ 20 22)'
+make test-compiler test-vm
+make benchmark    # Linux reference-machine Fibonacci timing gate
+```
+
+`pocketvm0 --vm` loads the Lisp compiler as source and runs emitted code on
+the VM. It also compiles the condition dispatcher so runtime hooks and their
+handlers share VM control frames. This tests the boundary while the bootstrap
+interpreter is present.
+`pocketvm` links the VM and loader without `eval0.c`; it loads
+`build/default/stage1/compiler.fasl` by default. `--image PATH` selects another
+compiler image. Both hosts accept ordered source files and `-e FORM` operands.
+Their `--build-image PATH` operation recompiles the same ordered source list;
+`make bootstrap` compares its stage-1 and stage-2 results with `cmp`.
+
+The development arena defaults to 16 MiB. The native host's `--runtime` switch
+selects the 4 MiB arena configuration; this does not yet provide later release
+linking and library stripping. Build results and unavailable checks are
+tracked in [milestones.md](milestones.md), not implied by these commands.
+
+## Follow compiled code
+
+1. `driver.c` reads a form and calls Lisp `PROCESS-TOPLEVEL`.
+2. `lisp/compiler/20-expand-analyze.lisp` records macro expansions and lexical
+   binding identities, including assignments and closure captures.
+3. `30-codegen.lisp` emits bytecode. Assigned captures share boxes; immutable
+   captures are copied into flat closure environments. Named vector indexes
+   keep these records usable before `defstruct` and `setf` exist.
+4. `vm.c` verifies operands, instruction boundaries and stack joins, then
+   executes an explicit frame loop. Tail calls reuse frames; dynamic scopes
+   retain their frames until bindings and cleanups have been restored.
+5. `50-fasl.lisp` assigns graph IDs in deterministic traversal order and writes
+   PFAS bytes. `loader.c` validates the complete image before interning symbols
+   or constructing executable closures. See [bytecode.md](bytecode.md).
+
+`lisp/boot/30-conditions.lisp` supplies the small condition subset required by M3.
+The VM invokes its ordinary Lisp hook before unwinding a kernel error, using
+reserved stack and heap capacity. The full condition/restart system remains
+M4. The approved [M3.1 diagnostics milestone](m31-plan.md) follows M3 acceptance
+and user review.
 
 ## Build and run stage 0
 
@@ -60,8 +107,9 @@ on the dynamic stack and restoring it during normal or non-local exit.
 
 Stage 0 uses a trampoline for tail calls and bounded C recursion for other
 evaluation. Non-local exits use explicit control/dynamic stacks and
-`setjmp`/`longjmp`. The VM milestone replaces tree walking with bytecode and
-explicit VM frames; it must not hide calls back to the tree evaluator.
+`setjmp`/`longjmp`. The native VM host executes bytecode with explicit frames
+and excludes the tree evaluator from its link. The source-development host
+retains both engines to exercise bootstrap boundaries.
 
 ## Keep Values alive
 
@@ -95,7 +143,7 @@ It builds list helpers, definition macros, control macros, backquote, and
 package helpers. `10-lambda-list.lisp` lowers optional, keyword, auxiliary,
 and destructuring parameters into the same small core. `20-cl-macros.lisp`
 adds further derived forms. This shared expansion must work on both the
-interpreter and the later compiled runtime.
+interpreter and the compiled runtime.
 
 Keep language policy here: equality over compound objects, macro expansion,
 lambda-list validation, and condition dispatch belong in Lisp. A new C

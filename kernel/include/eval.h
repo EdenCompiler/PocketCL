@@ -17,6 +17,8 @@ enum {
 };
 
 typedef struct PState PState;
+typedef Value (*PStateApplyFn)(PState *state, Value function, size_t argc,
+                               const Value *argv);
 
 /* A tree closure owns its lambda list, body and lexical environment. The
  * compiler may append code metadata later while preserving the object prefix. */
@@ -55,6 +57,11 @@ struct PState {
     Value roots[P_EVAL_ROOT_LIMIT];
     Value tail_function;
     Value tail_arguments[512];
+    /* Bridge hooks are engine dispatch, never native-primitive callbacks.
+     * The final runtime leaves interpreted_apply NULL; stage 0 installs it
+     * so its tree evaluator and compiled bootstrap closures can interoperate. */
+    PStateApplyFn interpreted_apply;
+    void *vm_engine;
     void *control;
     size_t tail_argc, control_capacity, call_depth, max_call_depth, saved_root_count;
     size_t root_used;
@@ -88,5 +95,14 @@ bool p_env_set(PState *state, Value environment, PEnvNamespace space,
 /* The primitive table is installed by the primitive subsystem after state
  * initialization; keeping that step explicit lets tests use an empty image. */
 bool p_install_primitives(PState *state);
+/* Register one C primitive into CL (standard=true) or SYS. The helper
+ * reserves before mutating package/function state; native entries must still
+ * be non-collecting and must not call back into Lisp. */
+bool p_add_primitive(PState *state, const char *name, bool standard,
+                     PPrimitiveFn entry, PPrimitiveReserveFn reserve,
+                     size_t min_arity, size_t max_arity, unsigned flags);
+/* Check an inline operation's fallback function cell against its original
+ * native implementation. Redefinitions take the VM's ordinary call path. */
+bool p_is_builtin_primitive(Pocket *p, Value symbol, const char *name);
 
 #endif

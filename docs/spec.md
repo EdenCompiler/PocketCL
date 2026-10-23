@@ -4,7 +4,7 @@ PocketCL is intended to be a small, explicit subset of ANSI Common Lisp, not a n
 
 ## Current status
 
-**M0–M2 are implemented. M3–M12 and M14 are planned.** Stage 0 executes the supported native special operators, lexical closures with separate function/value namespaces, dynamic bindings, multiple values, lexical and dynamic non-local exits, and trampolined tail calls. Lisp bootstrap files supply the shared rich lambda-list expansion, definition/control macros, backquote, equality, and initial package helpers. Follow [roadmap.md](../roadmap.md) for milestone scope and acceptance criteria, and [milestones.md](milestones.md) for observed results.
+Stage 0 executes the supported native special operators, lexical closures with separate function/value namespaces, dynamic bindings, multiple values, lexical and dynamic non-local exits, and trampolined tail calls. Lisp bootstrap files supply the shared rich lambda-list expansion, definition/control macros, backquote, equality, and initial package helpers. The Lisp compiler emits verified bytecode with flat closures, shared boxes for assigned captures, explicit VM frames, and pointer-free PFAS images. The image-hosted development VM runs without the tree evaluator. Follow [roadmap.md](../roadmap.md) for milestone scope and acceptance criteria, and [milestones.md](milestones.md) for observed results and the current review checkpoint.
 
 The bootstrap reader bounds nesting to 256 forms and individual tokens/strings to 4095 UTF-8 bytes. Exceeding these bootstrap limits, encountering invalid UTF-8, or embedding NUL source bytes produces a structured error with line and column. The later full Lisp reader is a separate milestone. String escapes quote the next character literally, as in the CLHS; `\\n` in source denotes `n`, not a C-style newline escape.
 
@@ -15,7 +15,7 @@ At M1, NIL and T have their constant values and are exported; their type interfa
 - C99 supplies the kernel mechanisms defined in the roadmap: representation and memory, bootstrap execution, primitive operations, VM, and platform-facing code.
 - Lisp supplies the compiler, standard-library policy, tooling, tests, UI behavior, layout, style resolution, and drawlist construction.
 - The intended conformance rule is: supported behavior follows the CLHS; unsupported behavior reports a clear PocketCL unsupported-feature condition or a build-time error naming the symbol. It must not silently act like a different feature.
-- `COMMON-LISP` exports only symbols that PocketCL implements. The eventual conformance table must identify each standard symbol as supported, partial with notes, or excluded.
+- `COMMON-LISP` exports only symbols that PocketCL implements. The conformance table identifies each standard symbol's roles, status and tested profiles.
 - SBCL may be used as an optional differential oracle. It is not required to build or run PocketCL.
 
 ## Scope

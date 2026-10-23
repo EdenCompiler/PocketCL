@@ -1,5 +1,6 @@
 #include "pocket.h"
 #include "eval.h"
+#include "vm.h"
 #include "heap_internal.h"
 
 #include <limits.h>
@@ -87,6 +88,7 @@ Value p_error(Pocket *p, PErrorCode code, const char *message) {
         p->error.code = code;
         p->error.line = 0u;
         p->error.column = 0u;
+        p->error.signaled = false;
         if (message == NULL) message = "error";
         size_t i = 0u;
         for (; i + 1u < sizeof(p->error.message) && message[i] != '\0'; ++i)
@@ -217,6 +219,20 @@ static void mark_children(Pocket *p, size_t *mark_count, PObject *object) {
         mark_value(p, mark_count, closure->body);
         mark_value(p, mark_count, closure->environment);
         mark_value(p, mark_count, closure->rest_parameter);
+        break;
+    }
+    case P_PROTO: {
+        if (object_size < sizeof(PProto)) break;
+        PProto *proto = (PProto *)object;
+        mark_value(p, mark_count, proto->name);
+        mark_value(p, mark_count, proto->code);
+        mark_value(p, mark_count, proto->constants);
+        break;
+    }
+    case P_BOX: {
+        if (object_size < sizeof(PBox)) break;
+        PBox *box = (PBox *)object;
+        mark_value(p, mark_count, box->value);
         break;
     }
     case P_PRIMITIVE: {

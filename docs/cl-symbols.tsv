@@ -345,7 +345,7 @@ EQ	function	partial	dev
 EQL	function	partial	dev
 EQUAL	function	partial	dev
 EQUALP	function	unimplemented	none
-ERROR	function,type	unimplemented	none
+ERROR	function,type	partial	dev
 ETYPECASE	macro	unimplemented	none
 EVAL	function	unimplemented	none
 EVAL-WHEN	special-operator	partial	dev
@@ -427,8 +427,8 @@ GETF	function	unimplemented	none
 GETHASH	function	unimplemented	none
 GO	special-operator	partial	dev
 GRAPHIC-CHAR-P	function	unimplemented	none
-HANDLER-BIND	macro	unimplemented	none
-HANDLER-CASE	macro	unimplemented	none
+HANDLER-BIND	macro	partial	dev
+HANDLER-CASE	macro	partial	dev
 HASH-TABLE	type	unimplemented	none
 HASH-TABLE-COUNT	function	unimplemented	none
 HASH-TABLE-P	function	unimplemented	none
@@ -792,7 +792,7 @@ SHORT-FLOAT	type	unimplemented	none
 SHORT-FLOAT-EPSILON	constant	unimplemented	none
 SHORT-FLOAT-NEGATIVE-EPSILON	constant	unimplemented	none
 SHORT-SITE-NAME	function	unimplemented	none
-SIGNAL	function	unimplemented	none
+SIGNAL	function	partial	dev
 SIGNED-BYTE	type	unimplemented	none
 SIGNUM	function	unimplemented	none
 SIMPLE-ARRAY	type	unimplemented	none

@@ -1,0 +1,53 @@
+(in-package :pocket-compiler)
+
+;;; Append-only identity tables. The kernel hash is used only to choose a
+;;; lookup bucket. We always emit source-ordered buffers, never hash buckets,
+;;; so addresses and GC placement cannot affect an image's byte order.
+;;; Layout: #(count keys values occupied). Occupancy is separate because NIL
+;;; is a useful key and a useful value. There are no deletion/tombstone rules.
+(defun make-eq-table ()
+  (vector 0 (pocket.sys::%make-simple-vector 32 nil)
+          (pocket.sys::%make-simple-vector 32 nil)
+          (pocket.sys::%make-simple-vector 32 nil)))
+(defun eq-slot (table key)
+  (let* ((keys (svref table 1)) (used (svref table 3))
+         (capacity (length keys))
+         (index (rem (pocket.sys::%eq-hash key) capacity)))
+    (tagbody probe
+      (if (or (null (svref used index)) (eq (svref keys index) key))
+          (go found) nil)
+      (setq index (rem (1+ index) capacity))
+      (go probe)
+     found)
+    index))
+(defun eq-get (table key)
+  (let ((index (eq-slot table key)))
+    (if (svref (svref table 3) index)
+        (values (svref (svref table 2) index) t)
+        (values nil nil))))
+(defun eq-put-raw (table key value)
+  (let ((index (eq-slot table key)))
+    (if (svref (svref table 3) index) nil
+        (progn (vset table 0 (1+ (svref table 0)))
+               (vset (svref table 3) index t)
+               (vset (svref table 1) index key)))
+    (vset (svref table 2) index value)))
+(defun eq-grow (table)
+  (let* ((keys (svref table 1)) (values (svref table 2))
+         (used (svref table 3)) (size (length keys)) (index 0))
+    (vset table 0 0)
+    (vset table 1 (pocket.sys::%make-simple-vector (* size 2) nil))
+    (vset table 2 (pocket.sys::%make-simple-vector (* size 2) nil))
+    (vset table 3 (pocket.sys::%make-simple-vector (* size 2) nil))
+    (tagbody rehash
+      (if (= index size) (go done) nil)
+      (if (svref used index)
+          (eq-put-raw table (svref keys index) (svref values index)) nil)
+      (setq index (1+ index))
+      (go rehash)
+     done)
+    table))
+(defun eq-put (table key value)
+  (if (> (* 3 (1+ (svref table 0))) (* 2 (length (svref table 1))))
+      (eq-grow table) nil)
+  (eq-put-raw table key value))

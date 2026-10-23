@@ -2,7 +2,7 @@
 
 PocketCL implements a deliberate subset of ANSI Common Lisp. This page tracks every external symbol in the `COMMON-LISP` package and the current PocketCL status for that symbol. A symbol is exported by PocketCL only when its documented behavior is implemented; unsupported symbols must fail clearly at build time.
 
-The canonical source is [`cl-symbols.tsv`](cl-symbols.tsv). Each row records the uppercase symbol name, its standard role or roles, its implementation status, and the profiles in which it is currently available. Statuses are `implemented`, `partial`, `unimplemented`, and `excluded`. The `kind` column may contain comma-separated roles when a symbol has more than one standard role. `dev` currently means the stage-0 development host; `runtime` will be recorded after VM validation, and `none` means no implemented profile. Profiles describe tested availability, not future intentions.
+The canonical source is [`cl-symbols.tsv`](cl-symbols.tsv). Each row records the uppercase symbol name, its standard role or roles, its implementation status, and the profiles in which it is currently available. Statuses are `implemented`, `partial`, `unimplemented`, and `excluded`. The `kind` column may contain comma-separated roles when a symbol has more than one standard role. `dev` covers both development hosts: the stage-0 interpreter and the image-hosted VM. The later stripped release library will use `runtime`; selecting the 4 MiB arena alone does not establish that profile. `none` means no implemented profile. Profiles describe tested availability, not future intentions.
 
 Lambda-list and declaration names also carry the explicit `syntax-marker`
 role. A syntax role is checked as syntax, rather than requiring an ordinary
@@ -11,7 +11,19 @@ or constant role on the same standard name.
 
 The symbol inventory follows [Common Lisp HyperSpec §1.9, “Symbols in the COMMON-LISP Package”](https://www.lispworks.com/documentation/HyperSpec/Body/01_i.htm) and is generated during development from SBCL's `COMMON-LISP` exports. SBCL is not needed to check or build the project: the generated inventory is committed and the checker uses POSIX shell tools. Bootstrap exports remain partial where later milestones extend their interfaces, options, or type roles. The C diagnostic comparator is not an implementation of CL:EQUAL; bootstrap CL:EQUAL is written in Lisp.
 
-`make conformance` validates the complete offline inventory. `tools/check-runtime-conformance.sh` also checks actual exports, binding roles, and profile availability; syntax markers need no function binding, while macros do. M2 has passed its local acceptance gates; partial rows describe the bootstrap interfaces whose full library options or additional roles arrive in later milestones.
+`make conformance` validates the complete offline inventory. `tools/check-runtime-conformance.sh` also checks actual exports, binding roles, and profile availability; syntax markers need no function binding, while macros do. M3 has passed its local acceptance gates; the interpreter and image-hosted VM expose the same 200 standard names and pass the same 277 portable assertions. Partial rows describe the bootstrap interfaces whose full library options or additional roles arrive in later milestones.
+
+M3 work brings forward a small Lisp condition dispatcher for catchable VM
+stack exhaustion. The partial `HANDLER-BIND`/`HANDLER-CASE` interfaces preserve
+handler order, masking of the active cluster, unwind order and multiple values.
+`SIGNAL`/`ERROR` accept the internal condition objects, a condition-name symbol,
+or a literal message string without formatting arguments. General condition
+definitions, type predicates, initargs, restarts and debugger interfaces remain
+M4 work. The `ERROR` row's type role is consequently still partial. Condition
+type names are not exported merely because the dispatcher recognizes them.
+Portable condition tests use `ERROR`; VM-specific tests use
+`POCKET:STACK-OVERFLOW`. See [milestones.md](milestones.md) for validation and
+the M3 review checkpoint.
 
 <!-- BEGIN GENERATED SYMBOL TABLE -->
 | Symbol | Kind | Status | Profiles |
@@ -362,7 +374,7 @@ The symbol inventory follows [Common Lisp HyperSpec §1.9, “Symbols in the COM
 | EQL | function | partial | dev |
 | EQUAL | function | partial | dev |
 | EQUALP | function | unimplemented | none |
-| ERROR | function,type | unimplemented | none |
+| ERROR | function,type | partial | dev |
 | ETYPECASE | macro | unimplemented | none |
 | EVAL | function | unimplemented | none |
 | EVAL-WHEN | special-operator | partial | dev |
@@ -444,8 +456,8 @@ The symbol inventory follows [Common Lisp HyperSpec §1.9, “Symbols in the COM
 | GETHASH | function | unimplemented | none |
 | GO | special-operator | partial | dev |
 | GRAPHIC-CHAR-P | function | unimplemented | none |
-| HANDLER-BIND | macro | unimplemented | none |
-| HANDLER-CASE | macro | unimplemented | none |
+| HANDLER-BIND | macro | partial | dev |
+| HANDLER-CASE | macro | partial | dev |
 | HASH-TABLE | type | unimplemented | none |
 | HASH-TABLE-COUNT | function | unimplemented | none |
 | HASH-TABLE-P | function | unimplemented | none |
@@ -809,7 +821,7 @@ The symbol inventory follows [Common Lisp HyperSpec §1.9, “Symbols in the COM
 | SHORT-FLOAT-EPSILON | constant | unimplemented | none |
 | SHORT-FLOAT-NEGATIVE-EPSILON | constant | unimplemented | none |
 | SHORT-SITE-NAME | function | unimplemented | none |
-| SIGNAL | function | unimplemented | none |
+| SIGNAL | function | partial | dev |
 | SIGNED-BYTE | type | unimplemented | none |
 | SIGNUM | function | unimplemented | none |
 | SIMPLE-ARRAY | type | unimplemented | none |

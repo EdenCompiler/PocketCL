@@ -28,6 +28,9 @@ typedef struct {
     size_t line, column;
     Value datum, expected;
     char message[256];
+    /* Lisp ERROR already dispatched this condition. Returning to the host
+     * must not invoke the kernel hook and dispatch the same handlers twice. */
+    bool signaled;
 } PError;
 
 /* One-word object header: low byte type, mark bit 8, and byte size in

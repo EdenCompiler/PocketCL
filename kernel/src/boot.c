@@ -51,7 +51,7 @@ bool p_load_source(PState *state, const char *path, Value *last)
 
 bool p_load_boot(PState *state, const char *directory)
 {
-    const char *files[] = {"00-core.lisp", "10-lambda-list.lisp", "20-cl-macros.lisp"};
+    const char *files[] = {"00-core.lisp", "10-lambda-list.lisp", "20-cl-macros.lisp", "30-conditions.lisp"};
     char path[4096];
     size_t i;
     state->p->current_package = state->p->cl;

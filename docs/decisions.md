@@ -83,3 +83,44 @@ Decisions made where the roadmap leaves an implementation choice open. Add new e
 **Alternatives rejected:** separately allocated GC metadata, post-initialization host reallocations, implicit constructor collection, recursive marking, and a full heap scan for every pointer.
 
 The C `p_equal` helper is a bounded diagnostic comparator for reader tests, including vectors and finite cyclic graphs. It uses fixed local work arrays and returns false when its 1024-pair budget is exceeded. It is not CL:EQUAL; language equality belongs in Lisp. The diagnostic printer similarly emits stable cycle/depth markers. The bootstrap reader has explicit 256-form/4095-byte limits and reports excesses rather than exhausting C stacks.
+
+## 2026-10-23 — compiler metadata and reproducible images
+
+**Decision:** keep analysis records and identity tables in Lisp. Metadata is
+associated with both a source form and its lexical context. Assign FASL graph
+IDs through source-ordered buffers, using hashes only for lookup.
+
+**Reason:** a macro can reuse one cons tree in different scopes; an object
+address alone cannot identify the binding at each occurrence. Address-based
+hash bucket order must not affect image bytes. Tagged vectors remain usable
+before the M4 structure and generalized-place libraries exist.
+
+**Alternatives rejected:** compiler-specific C records, emission by hash-table
+iteration order, and storing native arena addresses in an image.
+
+PFAS v1 uses fixed-width little-endian operands and signed relative jumps.
+The C loader checks bounds, references, instructions and stack joins before
+materializing package symbols. Lisp controls serialization and top-level
+compile/load effects. Optional development debug sidecars are M3.1 work and
+must preserve the PFAS v1 fixed-point comparison.
+
+## 2026-10-23 — bounded VM errors and bootstrap engines
+
+**Decision:** use explicit arena-backed VM frames, dynamic entries and an
+ordinary Lisp error hook. Reserve 64 emergency frames, 1,024 operand values
+and 64 KiB of heap for signaling and cleanup. Native primitive entries still
+never invoke Lisp or collect.
+
+**Reason:** stack exhaustion must reach handlers before unwinding, and cleanup
+closures must execute without recursive C entry into the VM. The final native
+host excludes the tree evaluator. The source-development host compiles the
+condition dispatcher when entering `--vm` mode, keeping its hooks and handlers
+on the same control engine.
+
+**Alternatives rejected:** unbounded C recursion, silently growing the arena,
+or attempting to allocate reporting capacity after ordinary resources run out.
+
+This early condition subset preserves handler order, dynamic restoration and
+multiple values. General condition classes, restarts and debugger behavior
+remain M4. M3.1 supplies the approved diagnostic presentation layer after the
+M3 review checkpoint.

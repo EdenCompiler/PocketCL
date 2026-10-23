@@ -139,6 +139,23 @@
              declared-special-test) 19))
     (is (= (funcall (lambda () (declare (special declared-special-test))
                       declared-special-test)) 19)))
+  ;; A free SPECIAL declaration affects references but does not proclaim the
+  ;; name or change bindings of the same name introduced by inner LET forms.
+  (set 'portable-special-shadowing-test :global)
+  (let ((portable-special-shadowing-test :lexical))
+    (is-equal '(:lexical :global)
+              (list portable-special-shadowing-test
+                    (locally (declare (special portable-special-shadowing-test))
+                      portable-special-shadowing-test))))
+  (is (eq :inner-lexical
+          (locally (declare (special portable-special-shadowing-test))
+            (let ((portable-special-shadowing-test :inner-lexical))
+              portable-special-shadowing-test))))
+  (is (eq :inner-dynamic
+          (locally (declare (special portable-special-shadowing-test))
+            (let ((portable-special-shadowing-test :inner-dynamic))
+              (declare (special portable-special-shadowing-test))
+              portable-special-shadowing-test))))
   (catch 'done (let ((*special-test* 9)) (throw 'done *special-test*)))
   (is (= *special-test* 1))
   (let ((trace nil))

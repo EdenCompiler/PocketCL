@@ -1,6 +1,6 @@
 # Contributing to PocketCL
 
-PocketCL is being built milestone by milestone. Start with [roadmap.md](roadmap.md), especially the language split, repository layout, testing strategy, and milestone acceptance criteria. M0–M2 local checks pass; M3 compiler/VM work is next. Remote macOS CI is pending. Later milestones remain planned until their acceptance criteria pass.
+PocketCL is being built milestone by milestone. Start with [roadmap.md](roadmap.md), especially the language split, repository layout, testing strategy, and milestone acceptance criteria. See [docs/milestones.md](docs/milestones.md) for observed local results and the current review checkpoint. Remote macOS CI is pending. Later milestones remain planned until their acceptance criteria pass.
 
 ## First contribution path
 

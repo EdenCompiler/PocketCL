@@ -1596,7 +1596,7 @@ static Value primitive_error(PState *state, size_t argc, const Value *argv)
     (void)argc;
     if (p_type(argv[0]) != P_STRING)
         return fail(state, P_ERR_TYPE, "%ERROR requires a string message");
-    if (!p_string_to_utf8(state->p, argv[0], message, sizeof(message), &written))
+    if (!p_string_to_utf8(state->p, argv[0], message, sizeof(message) - 1u, &written))
         return 0;
     message[written] = '\0';
     return fail(state, P_ERR_CONTROL, message);
@@ -1880,6 +1880,22 @@ typedef struct {
     { name, primitive_control_placeholder, NULL, min, max, flags, true }
 #define VARIADIC P_EVAL_PRIMITIVE_VARIADIC
 
+bool p_is_builtin_primitive(Pocket *p, Value symbol, const char *name)
+{
+    PPrimitiveFn expected = NULL;
+    (void)p;
+    if (p_type(symbol) != P_SYMBOL ||
+        p_type(p_symbol_ptr(symbol)->function) != P_PRIMITIVE) return false;
+    if (strcmp(name, "+") == 0) expected = primitive_add;
+    else if (strcmp(name, "-") == 0) expected = primitive_subtract;
+    else if (strcmp(name, "<") == 0) expected = primitive_num_lt;
+    else if (strcmp(name, "=") == 0) expected = primitive_num_eq;
+    else if (strcmp(name, "CONS") == 0) expected = primitive_cons;
+    else if (strcmp(name, "CAR") == 0) expected = primitive_car;
+    else if (strcmp(name, "CDR") == 0) expected = primitive_cdr;
+    return expected && ((PPrimitive *)p_symbol_ptr(symbol)->function)->entry == expected;
+}
+
 static const PrimitiveSpec primitive_specs[] = {
     SPEC("CONS", primitive_cons, 2u, 2u, reserve_cons, true),
     SPEC("CAR", primitive_car, 1u, 1u, NULL, true),
@@ -2021,6 +2037,47 @@ static bool install_special_variable(Pocket *p, const char *name, Value value)
     return true;
 }
 
+static bool add_primitive_reserved(PState *state, const char *name,
+                                   bool standard, PPrimitiveFn entry,
+                                   PPrimitiveReserveFn reserve,
+                                   size_t min_arity, size_t max_arity,
+                                   unsigned flags)
+{
+    Pocket *p = state->p;
+    Value package = standard ? p->cl : p->sys;
+    Value symbol = intern_primitive_name(p, package, name, standard);
+    if (symbol == 0u) return false;
+    PPrimitive *primitive = (PPrimitive *)p_alloc(p, P_PRIMITIVE,
+                                                   sizeof(*primitive));
+    if (primitive == NULL) return false;
+    primitive->name = symbol;
+    primitive->entry = entry;
+    primitive->reserve = reserve;
+    primitive->min_arity = min_arity;
+    primitive->max_arity = max_arity;
+    primitive->flags = flags;
+    p_symbol_ptr(symbol)->function = (Value)primitive;
+    p_symbol_ptr(symbol)->flags &= ~P_MACRO;
+    return true;
+}
+
+bool p_add_primitive(PState *state, const char *name, bool standard,
+                     PPrimitiveFn entry, PPrimitiveReserveFn reserve,
+                     size_t min_arity, size_t max_arity, unsigned flags)
+{
+    if (state == NULL || !state->initialized || state->p == NULL ||
+        name == NULL || entry == NULL) return false;
+    size_t length = strlen(name);
+    if (length > (SIZE_MAX - 2048u - sizeof(PPrimitive)) / 8u) {
+        (void)p_error(state->p, P_ERR_RANGE, "primitive name is too long");
+        return false;
+    }
+    size_t reserve_bytes = 2048u + length * 8u + sizeof(PPrimitive);
+    if (!p_reserve(state->p, reserve_bytes)) return false;
+    return add_primitive_reserved(state, name, standard, entry, reserve,
+                                  min_arity, max_arity, flags);
+}
+
 bool p_install_primitives(PState *state)
 {
     Pocket *p;
@@ -2034,23 +2091,10 @@ bool p_install_primitives(PState *state)
         return false;
     for (i = 0; i < sizeof(primitive_specs) / sizeof(primitive_specs[0]); ++i) {
         const PrimitiveSpec *spec = &primitive_specs[i];
-        Value package = spec->standard ? p->cl : p->sys;
-        Value symbol = intern_primitive_name(p, package, spec->name,
-                                             spec->standard);
-        PPrimitive *primitive;
-        if (!symbol)
-            return false;
-        primitive = (PPrimitive *)p_alloc(p, P_PRIMITIVE, sizeof(*primitive));
-        if (primitive == NULL)
-            return false;
-        primitive->name = symbol;
-        primitive->entry = spec->entry;
-        primitive->reserve = spec->reserve;
-        primitive->min_arity = spec->min_arity;
-        primitive->max_arity = spec->max_arity;
-        primitive->flags = spec->flags;
-        p_symbol_ptr(symbol)->function = (Value)primitive;
-        p_symbol_ptr(symbol)->flags &= ~P_MACRO;
+        if (!add_primitive_reserved(state, spec->name, spec->standard,
+                                    spec->entry, spec->reserve,
+                                    spec->min_arity, spec->max_arity,
+                                    spec->flags)) return false;
     }
     if (!install_special_variable(p, "*PACKAGE*", p->user) ||
         !install_special_variable(p, "*FEATURES*", p->features) ||
